@@ -1,0 +1,26 @@
+{
+  "name": "macsport",
+  "version": "1.0.0",
+  "description": "packages installed on website from macsport",
+  "keywords": [
+    "macsport"
+  ],
+  "homepage": "https://github.com/Miketerrara/macsport#readme",
+  "bugs": {
+    "url": "https://github.com/Miketerrara/macsport/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Miketerrara/macsport.git"
+  },
+  "license": "ISC",
+  "author": "agbe-solucoes",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@flaticon/flaticon-uicons": "^3.3.1"
+  }
+}
