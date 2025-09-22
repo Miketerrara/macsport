@@ -56,77 +56,469 @@ button {
 }
 
 .hero {
+  display: block;
+  position: relative;
+  width: 100%;
+  z-index: -1;
+}
+.hero__img {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
+}
+
+.produtos {
+  padding: 6rem 0 6rem 1rem;
+  width: 100%;
+  background: #FEFEFD;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  gap: 2rem;
+}
+.produtos__title {
+  font: 800 8rem/8.4rem "Gabarito", sans-serif;
+  color: #787878;
+  text-transform: uppercase;
+}
+.produtos__sidebar {
+  flex: 1 1 24%;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #d9d9d9;
+}
+.produtos__sidebar-itens {
+  width: 100%;
+  flex-direction: column;
+  margin: 1.2rem;
+}
+.produtos__sidebar-itens .seletores {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.25s ease-in;
+}
+.produtos__sidebar-itens .seletores--active {
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.produtos__sidebar-itens .seletores div {
+  margin-top: 2rem;
+  margin-left: 1.2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+.produtos__sidebar-itens .seletores div input[type=checkbox] {
+  outline: 1px solid #31302E;
+  margin-right: 1.2rem;
+}
+.produtos__sidebar-itens .seletores div input[type=checkbox]:hover {
+  outline: 1px solid #FFCB0B;
+  border: 1px solid #FFCB0B;
+}
+.produtos__sidebar-itens .seletores div input[type=checkbox]:focus {
+  outline: 1px solid #FFCB0B;
+}
+.produtos__sidebar-itens .seletores div label {
+  font: 300 1.6rem "Gabarito", sans-serif;
+  color: #838382;
+}
+.produtos__sidebar-btn {
+  width: 100%;
+  padding-right: 3.2rem;
+  box-sizing: border-box;
+  color: #31302E;
+  font-weight: 800;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.produtos__sidebar hr {
+  width: 90%;
+  height: 2px;
+  background: #d9d9d9;
+  border: transparent;
+  margin: 1rem auto;
+}
+.produtos__cards {
+  flex: 1 1 100%;
+}
+.produtos__cards-filters {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+}
+.produtos__cards-filters .column, .produtos__cards-filters .list, .produtos__cards-filters .filter {
+  font-size: 1.6rem;
+  margin-left: 1.2rem;
+  border-radius: 0.4rem;
+  width: 3.6rem;
+  height: 3.6rem;
+  padding: 0.8rem;
+  box-sizing: border-box;
+  align-content: center;
+  transition: all 0.25s ease-in;
+  cursor: pointer;
+}
+.produtos__cards-filters .column:active, .produtos__cards-filters .list:active, .produtos__cards-filters .filter:active {
+  border: 1px solid #838382;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
+}
+.produtos__cards-filters .filter {
+  display: none;
+}
+.produtos-symbol {
+  transition: all 0.3s ease-in-out;
+}
+.produtos-symbol--active {
+  rotate: 90deg;
+}
+@media screen and (max-width: 1024px) {
+  .produtos__title {
+    font: 900 5.6rem "Gabarito", sans-serif;
+    width: 80%;
+  }
+  .produtos__sidebar {
+    display: none;
+  }
+  .produtos__cards-filters {
+    padding: 0 2rem;
+    box-sizing: border-box;
+  }
+  .produtos__cards-filters .filter {
+    position: absolute;
+    top: -5rem;
+    right: 2rem;
+    border-radius: 0.8rem;
+    width: 10rem;
+    background-color: #838382;
+    color: #FEFEFD;
+    display: block;
+  }
+}
+
+.box {
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  column-gap: 2rem;
+  row-gap: 3.2rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+}
+.box__cards {
+  border-radius: 1.2rem;
+  flex: 1 1 32rem;
+  max-width: 32rem;
+  height: 48rem;
+  cursor: pointer;
+}
+.box__cards:hover {
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.05);
+}
+.box__cards-img {
+  width: 100%;
+  height: 30rem;
+  object-fit: cover;
+  margin-bottom: 2rem;
+}
+.box__cards span {
+  color: #C5203C;
+  font: 300 1.2rem "Gabarito", sans-serif;
+  letter-spacing: 1.2px;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+.box__cards--btn {
+  display: block;
+  width: 30rem;
+  font-size: 1.2rem;
+  box-sizing: border-box;
+  border: none;
+  background-color: #FFCB0B;
+  padding: 0.8rem 2rem;
+  border-radius: 2rem;
+  color: #31302E;
+  margin: 2rem auto;
+  transition: all 0.25s ease-in;
+}
+.box__cards--btn:hover {
+  background-color: #FFE06D;
+  color: #838382;
+}
+.box__title {
+  margin: 1.2rem 0 2rem;
+  font: 800 2.6rem "Gabarito", sans-serif;
+  color: #31302E;
+  letter-spacing: 0.5px;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 1024px) {
+  .box__cards {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+  .box__cards span {
+    font-size: 1.6rem;
+  }
+  .box__cards--btn {
+    width: 100%;
+    font-size: 2rem;
+  }
+  .box__title {
+    font-size: 3.2rem;
+  }
+}
+
+#quantity {
+  font: 300 1.2rem "Gabarito", sans-serif;
+}
+
+.more {
+  text-decoration: underline;
+  color: #31302E;
+  cursor: pointer;
+  transition: all 0.25s ease-in;
+}
+.more:hover {
+  color: #C5203C;
+}
+
+#modal {
+  display: none;
+  width: 70vw;
+  height: 88vh;
+  background-color: #fff;
+  position: fixed;
+  top: 10rem;
+  left: 50%;
+  border-radius: 1rem;
+  padding: 4rem;
+  box-sizing: border-box;
+  transform: translate(-50%, 0);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
+  overflow: auto;
+  z-index: 99;
+}
+#modal hr {
+  margin: 5rem auto;
+}
+#modal .dismiss {
+  position: absolute;
+  display: block;
+  border: 1px solid #31302E;
+  padding: 0.6rem;
+  width: 3rem;
+  height: 3rem;
+  box-sizing: border-box;
+  border-radius: 0.4rem;
+  font-size: 1.6rem;
+  color: #31302E;
+  inset: 4rem auto 4rem auto;
+  right: 4rem;
+  transition: all 0.25s ease-in;
+  cursor: pointer;
+}
+#modal .dismiss:hover {
+  transform: scale(1.05);
+}
+@media screen and (max-width: 1024px) {
+  #modal {
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+  }
+}
+
+.bloco {
+  width: 100%;
+  margin: 2rem auto;
+  gap: 3.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+}
+.bloco__imgs {
+  flex: 1 1 64rem;
+  max-width: 64rem;
+  gap: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+}
+.bloco__imgs-thumbs {
+  max-width: 12rem;
+  gap: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.bloco__imgs-thumbs img {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 0.8rem;
+  object-fit: cover;
+  filter: saturate(0.2) contrast(0.8) opacity(0.35);
+  cursor: pointer;
+  transition: all 0.25s ease-in;
+}
+.bloco__imgs-thumbs img:hover {
+  filter: opacity(0.8);
+}
+.bloco__imgs-img {
   position: relative;
   width: 100%;
 }
-.hero .block {
+.bloco__imgs-img img {
+  width: 52rem;
+  height: 52rem;
+  overflow: hidden;
+  object-fit: cover;
+  border-radius: 1.2rem;
+  object-position: 30% 50%;
+}
+.bloco__imgs-img .fi-bs-arrow-small-right, .bloco__imgs-img .fi-bs-arrow-small-left {
   position: absolute;
-  top: 180px;
-  left: 320px;
-  width: 65rem;
-  z-index: 2;
-}
-.hero__video {
-  filter: contrast(1.25) saturate(0.4) brightness(0.25) blur(5px);
-  width: 100%;
-}
-.hero__img {
-  width: 100%;
-  height: 80vh;
-  object-fit: cover;
-}
-.hero__title {
-  font: 900 9.6rem/9.6rem "Gabarito", sans-serif;
+  top: 50%;
+  width: 4.8rem;
+  height: 2.8rem;
+  padding: 0.4rem;
+  border-radius: 1.6rem;
+  box-sizing: border-box;
   color: #FEFEFD;
+  text-align: center;
+  background-color: #31302E;
+  font-size: 2rem;
+  transform: translate(0, -50%);
+  cursor: pointer;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
+}
+.bloco__imgs-img .fi-bs-arrow-small-right:hover, .bloco__imgs-img .fi-bs-arrow-small-left:hover {
+  background-color: #838382;
+}
+.bloco__imgs-img .fi-bs-arrow-small-right {
+  right: -0.8rem;
+}
+.bloco__imgs-img .fi-bs-arrow-small-left {
+  left: -0.8rem;
+}
+.bloco__info {
+  padding: 0 2rem 0 0;
+  box-sizing: border-box;
+}
+.bloco__info label {
+  font: 300 1.6rem "Gabarito", sans-serif;
+  color: #838382;
+  margin-right: 1.2rem;
+}
+.bloco__info input {
+  font-size: 1.4rem;
+  margin: 2rem 0 0;
+  padding: 1rem 1.6rem;
+  box-sizing: border-box;
+  border-radius: 0.8rem;
+  outline: none;
+  border: 1px solid #838382;
+  color: #838382;
   text-transform: uppercase;
-}
-.hero__txt {
-  font: 300 3.2rem/4rem "Gabarito", sans-serif;
-  letter-spacing: 3px;
-  margin-top: 0.8rem;
-  color: #FEFEFD;
-}
-.hero__btn {
-  font: 800 3.2rem "Gabarito", sans-serif;
-  text-transform: uppercase;
-  background: linear-gradient(90deg, #ED6928, #F5B958);
-  border-radius: 0.4rem;
-  color: #FEFEFD;
-  width: 42rem;
-  height: 7.6rem;
-  margin-top: 2rem;
-}
-.hero__img {
-  width: 100%;
-  height: 80vh;
-  object-fit: cover;
 }
 @media screen and (max-width: 1024px) {
-  .hero .block {
-    top: 24vh;
-    left: 2rem;
-    width: 90%;
+  .bloco {
+    flex-direction: column;
   }
-  .hero__title {
-    font: 900 4.8rem "Gabarito", sans-serif;
-    line-height: 4.8rem;
+  .bloco__imgs {
+    flex-direction: column;
+    flex: 0 0 100%;
   }
-  .hero__txt {
-    font: 300 2rem/2.4rem "Gabarito", sans-serif;
-    letter-spacing: 2px;
+  .bloco__imgs-thumbs {
+    flex-direction: row;
+    margin-top: 4rem;
   }
-  .hero__txt span::after {
-    content: "\a";
-    white-space: pre;
+  .bloco__imgs-img img {
+    width: 100%;
+    height: 32rem;
   }
-  .hero__btn {
-    width: 24rem;
-    font-size: 2.4rem;
-    height: 6rem;
+}
+
+.description {
+  font: 800 4.8rem "Gabarito", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  color: #31302E !important;
+}
+
+.list li, .produtos__cards-filters .filter li {
+  margin: 0.8rem 0;
+  font: 300 1.4rem "Gabarito", sans-serif;
+  color: #838382;
+}
+
+.related {
+  gap: 3.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.related__cards {
+  flex: 1 1 32rem;
+  max-width: 30rem;
+  margin: 3.2rem 0;
+  height: 44rem;
+  cursor: pointer;
+  transition: all 0.25s ease-in;
+}
+.related__cards:hover {
+  border: 1px solid #838382;
+}
+.related__cards span {
+  font: 200 1.6rem/2.4rem "Gabarito", sans-serif;
+  color: #EEBDC5;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+.related__cards-title {
+  font: 900 3.2rem "Gabarito", sans-serif;
+  color: #31302E;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+.related__cards-img {
+  width: 100%;
+  height: 30rem;
+  border-radius: 1.2rem;
+  object-fit: cover;
+  margin-bottom: 2rem;
+}
+@media screen and (max-width: 1024px) {
+  .related {
+    flex-direction: column;
   }
-  .hero video {
-    height: 80vh;
-    object-fit: cover;
+  .related__cards {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin: 2rem 0;
   }
 }
 
@@ -136,6 +528,7 @@ html {
 }
 
 body {
+  position: relative;
   font-family: "Gabarito", sans-serif;
   background: #fff;
   overflow-x: hidden;
@@ -154,18 +547,18 @@ header .container {
   padding: 0;
 }
 header .container .nav {
-  display: flex;
+  height: 8rem;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
+  display: flex;
 }
 header .container .nav__line {
   position: relative;
-  display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  margin-right: 6rem;
+  display: flex;
   gap: 40px;
 }
 header .container .nav-itens {
@@ -211,10 +604,10 @@ header .container .nav--hover .menu-dropdown {
   width: 50rem;
 }
 header .container .nav--hover .menu-categorias {
-  display: flex;
   justify-content: space-between;
   align-items: flex-start;
   flex-direction: column;
+  display: flex;
   gap: 1.5rem;
   color: #31302E;
   border-right: 1px solid #ddd;
@@ -269,10 +662,6 @@ header .toggle {
 header .menu-toggle {
   display: none;
 }
-header .gtranslate_wrapper {
-  position: absolute;
-  right: 18vw !important;
-}
 @media screen and (max-width: 1024px) {
   header .nav__itens {
     display: none !important;
@@ -295,8 +684,8 @@ header .gtranslate_wrapper {
     display: block;
     position: fixed;
     height: 100%;
-    width: 100%;
-    background: linear-gradient(90deg, #ED6928, #F5B958);
+    width: 100vw;
+    background: #FFCB0B;
     top: 0;
     z-index: 999;
   }
@@ -307,10 +696,6 @@ header .gtranslate_wrapper {
     font-size: 3.2rem;
     color: #31302E;
   }
-  header .menu-toggle--active .language {
-    display: block;
-    margin: 0 auto;
-  }
   header .menu-toggle__position {
     position: absolute;
     width: 100%;
@@ -319,17 +704,131 @@ header .gtranslate_wrapper {
     transform: translate(-50%, -50%);
   }
   header .menu-toggle__itens {
-    font: 300 2rem/2.4rem "Gabarito", sans-serif;
-    font-weight: 500;
-    color: #FEFEFD;
+    font: 300 2.4rem/2.8rem "Gabarito", sans-serif;
+    font-weight: 800;
+    color: #31302E;
     text-transform: uppercase;
     text-align: center;
-    margin: 2.8rem 0;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-color: #838382;
+    margin: 4.8rem 0;
     letter-spacing: 1px;
   }
 }
 
-.title, .franquias__title, .horarios__registry-title {
+.assistencia {
+  position: fixed;
+  top: 0;
+  right: -500px;
+  transition: all 0.3s ease-in-out;
+}
+.assistencia--active {
+  top: 0;
+  right: 0;
+  background-color: #FFCB0B;
+  width: 56rem;
+  height: 72rem;
+  padding: 4.8rem 5.6rem;
+  box-sizing: border-box;
+  border-bottom-left-radius: 0.8rem;
+}
+.assistencia__title {
+  font: 800 2rem/2.8rem "Gabarito", sans-serif;
+  color: #31302E;
+  margin: 1.6rem 0;
+}
+.assistencia__form {
+  align-items: flex-start !important;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+}
+.assistencia__form select {
+  width: 100%;
+  padding: 2rem 1.2rem;
+  border: 1px solid #d9d9d9;
+  outline: none;
+  box-sizing: border-box;
+  appearance: none;
+  margin-bottom: 1rem;
+}
+.assistencia__form select:checked {
+  color: #d9d9d9;
+}
+.assistencia__form select:active {
+  color: #d9d9d9;
+}
+.assistencia__form select:focus {
+  color: #d9d9d9;
+}
+.assistencia__form select option {
+  color: #838382;
+}
+.assistencia__form select option[selected] {
+  color: #d9d9d9;
+}
+.assistencia__form fieldset {
+  margin: 1rem 0;
+  width: 100%;
+  gap: 1rem;
+}
+.assistencia__form label {
+  display: block;
+  font: 200 1.6rem/2.4rem "Gabarito", sans-serif;
+  color: #31302E;
+  margin: 0.4rem 0;
+  text-align: left;
+}
+.assistencia__form input, .assistencia__form textarea {
+  padding: 1.6rem 1rem;
+  border-radius: 0.2rem;
+  color: #838382;
+  border: 1px solid #31302E;
+  outline: none;
+  width: 100%;
+  max-width: 63rem;
+  box-sizing: border-box;
+  font-family: "Gabarito", sans-serif;
+  margin: 0.4rem 0;
+  background: transparent;
+}
+.assistencia__form input::placeholder, .assistencia__form textarea::placeholder {
+  color: #838382;
+  font-family: "Gabarito", sans-serif;
+  letter-spacing: 0.8px;
+}
+.assistencia__form textarea {
+  height: 20rem;
+}
+.assistencia__form .submit {
+  width: 100%;
+  padding: 1.2rem 1rem;
+  background-color: #31302E;
+  color: #FEFEFD;
+  font-size: 1.4rem;
+  border: 0px solid transparent;
+  border-radius: 0.4rem;
+  margin-top: 2rem;
+}
+@media screen and (max-width: 1024px) {
+  .assistencia__form {
+    padding: 0 1.2rem;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  .assistencia__form .submit {
+    width: 100%;
+    height: 5.6rem;
+  }
+}
+
+.title, .banner .title__banner {
   font: 800 8rem/8.4rem "Gabarito", sans-serif;
   color: #FFCB0B;
   text-transform: uppercase;
@@ -337,14 +836,14 @@ header .gtranslate_wrapper {
 }
 .title__equipment {
   text-align: center;
-  font: 300 1.6rem/2.4rem "Gabarito", sans-serif;
+  font: 200 1.6rem/2.4rem "Gabarito", sans-serif;
   color: #838382;
   letter-spacing: 3px;
   margin: 4rem 0 2rem;
 }
 .title__faq {
   text-align: center;
-  font: 900 4.8rem "Gabarito", sans-serif;
+  font: 900 5.6rem "Gabarito", sans-serif;
   color: #31302E;
 }
 
@@ -364,23 +863,23 @@ header .gtranslate_wrapper {
   display: block;
 }
 .container__form {
-  display: flex;
   justify-content: space-between;
   align-items: flex-start;
   flex-direction: row;
+  display: flex;
   gap: 2rem;
 }
 .container__form-franqueado {
   padding: 4rem 8rem 2rem;
   box-sizing: border-box;
 }
-.container__form-franqueado .title, .container__form-franqueado .franquias__title, .container__form-franqueado .horarios__registry-title, .container__form-franqueado .txt, .container__form-franqueado .franquias__txt {
+.container__form-franqueado .title, .container__form-franqueado .banner .title__banner, .banner .container__form-franqueado .title__banner, .container__form-franqueado .txt {
   color: #fff;
 }
 .container__form-dsc {
   flex: 2 1 48rem;
 }
-.container__form-dsc .title, .container__form-dsc .franquias__title, .container__form-dsc .horarios__registry-title, .container__form-dsc .txt, .container__form-dsc .franquias__txt {
+.container__form-dsc .title, .container__form-dsc .banner .title__banner, .banner .container__form-dsc .title__banner, .container__form-dsc .txt {
   text-align: left;
 }
 .container__form-card {
@@ -392,16 +891,16 @@ header .gtranslate_wrapper {
   border-radius: 1rem;
   background: linear-gradient(90deg, #ED6928, #F5B958);
 }
-.container__carrer {
+.container__produtos {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
 }
 .container-franquias {
-  display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
+  display: flex;
 }
 @media screen and (max-width: 1024px) {
   .container {
@@ -410,10 +909,10 @@ header .gtranslate_wrapper {
     width: 100%;
   }
   .container__form {
-    display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
+    display: flex;
     flex-wrap: wrap;
   }
   .container__form-dsc {
@@ -430,46 +929,59 @@ header .gtranslate_wrapper {
     padding: 4rem 2rem 2rem;
   }
   .container-franquias {
-    display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    display: flex;
   }
 }
 
 .diferencas {
-  display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
+  display: flex;
 }
 .diferencas__bloco {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
   gap: 2rem;
   padding: 3.2rem 4rem;
   box-sizing: border-box;
   background-color: #FEFEFD;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
   border-radius: 1.2rem;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  display: flex;
 }
 .diferencas__bloco-icon {
   font-size: 4.2rem;
   color: #FFCB0B;
 }
 .diferencas__bloco-txt {
-  font: 300 2rem/2.4rem "Gabarito", sans-serif;
+  font: 300 2.4rem/2.8rem "Gabarito", sans-serif;
   color: #31302E;
+}
+@media screen and (max-width: 1024px) {
+  .diferencas {
+    flex-direction: column;
+  }
+  .diferencas__bloco {
+    width: 100%;
+    height: 16rem;
+    justify-content: flex-start;
+    padding: 4rem 8rem;
+    margin: 1rem 0;
+    border-radius: 0;
+  }
 }
 
 .descubra {
-  display: flex;
+  gap: 3.2rem;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  gap: 3.2rem;
+  display: flex;
 }
 .descubra__bloco {
   position: relative;
@@ -480,13 +992,13 @@ header .gtranslate_wrapper {
   margin: 2rem;
 }
 .descubra__bloco-info span {
-  font: 300 1.6rem/2.4rem "Gabarito", sans-serif;
+  font: 200 1.6rem/2.4rem "Gabarito", sans-serif;
   color: #838382;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   text-decoration: underline;
 }
 .descubra__bloco-info .desc {
-  font: 300 1.6rem/2.4rem "Gabarito", sans-serif;
+  font: 200 1.6rem/2.4rem "Gabarito", sans-serif;
   color: #838382;
 }
 .descubra__bloco-info .desc span::after {
@@ -500,13 +1012,14 @@ header .gtranslate_wrapper {
   border-radius: 1.2rem;
 }
 .descubra__bloco-btn {
+  text-transform: uppercase;
   border: none;
-  background: #FFCB0B;
-  font: 300 1.4rem "Gabarito", sans-serif;
+  background: #FFE06D;
+  font: 800 1.4rem "Gabarito", sans-serif;
   padding: 0.4rem 4rem;
   height: 3.6rem;
   border-radius: 0.4rem;
-  color: #31302E;
+  color: #838382;
   margin: 0.4 0;
   transition: all 0.25s ease-in;
   cursor: pointer;
@@ -514,15 +1027,109 @@ header .gtranslate_wrapper {
 .descubra__bloco-btn:hover {
   background: #FFE06D;
 }
+@media screen and (max-width: 1024px) {
+  .descubra {
+    flex-direction: column;
+  }
+}
 
 .promote {
   background-color: #FCFAF9;
   width: 100%;
-  display: flex;
+  height: 20rem;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  height: 20rem;
+  display: flex;
+}
+.promote hr {
+  rotate: 90deg;
+}
+.promote__bloco {
+  gap: 2rem;
+  padding: 2rem;
+  flex: 1 1 50%;
+  box-sizing: border-box;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  display: flex;
+}
+.promote__bloco:first-child {
+  border-right: 1px solid #838382;
+}
+.promote__bloco .title, .promote__bloco .banner .title__banner, .banner .promote__bloco .title__banner {
+  font-size: 3.2rem;
+  line-height: 3.6rem;
+}
+.promote__bloco .classify {
+  color: #FFCB0B;
+  font-size: 1.6rem;
+  margin: 1.2rem 0;
+  cursor: pointer;
+}
+.promote__bloco .classify i {
+  margin: 0 0.1rem;
+}
+.promote__bloco span {
+  color: #C5203C;
+  font: 200 1.6rem/2.4rem "Gabarito", sans-serif;
+  letter-spacing: 1px;
+  text-decoration: underline;
+}
+.promote__bloco-img {
+  width: 16rem;
+  height: 14rem;
+  object-fit: cover;
+}
+.promote__bloco-btn {
+  text-transform: uppercase;
+  border: none;
+  background: #FFE06D;
+  font: 800 1.4rem "Gabarito", sans-serif;
+  padding: 0.4rem 4rem;
+  height: 3.6rem;
+  border-radius: 0.4rem;
+  color: #838382;
+  margin: 0.4 0;
+  transition: all 0.25s ease-in;
+  cursor: pointer;
+}
+.promote__bloco-btn:hover {
+  background: #FFE06D;
+}
+@media screen and (max-width: 1024px) {
+  .promote {
+    flex-direction: column;
+    height: 48rem;
+  }
+  .promote__bloco:first-child {
+    border-right: transparent;
+    border-bottom: 1px solid #838382;
+  }
+  .promote__bloco-img {
+    height: 16rem;
+  }
+}
+
+.section__title {
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  display: flex;
+  gap: 3.2rem;
+}
+.section__title .title, .section__title .banner .title__banner, .banner .section__title .title__banner {
+  font: 900 5.6rem "Gabarito", sans-serif;
+}
+.section__title-timer {
+  background-color: #FFFAE7;
+  padding: 0.8rem 3rem;
+  box-sizing: border-box;
+  font: 200 1.6rem/2.4rem "Gabarito", sans-serif;
+  color: #838382;
+  letter-spacing: 1.6px;
+  border-radius: 2rem;
 }
 
 .close {
@@ -535,710 +1142,424 @@ header .gtranslate_wrapper {
   color: #FEFEFD;
 }
 
-.banner {
-  position: relative;
-  width: 100%;
-}
-.banner__img {
-  width: 100%;
-  max-height: 40rem;
-  object-fit: cover;
-}
-.banner .title, .banner .franquias__title, .banner .horarios__registry-title {
-  position: absolute;
-  top: 50%;
-  left: 15vw;
-  transform: translate(0, -50%);
-  color: #FEFEFD;
-}
-
-.txt, .franquias__txt {
-  font: 300 3.2rem/4rem "Gabarito", sans-serif;
+.txt {
+  font: 200 1.6rem/2.4rem "Gabarito", sans-serif;
   color: #838382;
   margin: 1rem 0;
-  text-align: center;
+  text-align: left;
 }
 
-.boxes {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  flex-direction: row;
-  margin-top: -12rem;
-  position: relative;
+.recomendacao {
   gap: 2rem;
-  z-index: 4;
-}
-.boxes .box {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: column;
-  flex: 1 1 10.9rem;
-  height: auto;
-  background-color: rgba(255, 255, 255, 0);
-  box-sizing: border-box;
-}
-.boxes .box .fi {
-  font-size: 7.2rem;
-  color: #FFCB0B;
-}
-.boxes .box__txt {
-  font: 300 3.2rem/4rem "Gabarito", sans-serif;
-  color: #838382;
-}
-.boxes .box__title {
-  font: 900 3.2rem "Gabarito", sans-serif;
-  color: #838382;
-}
-.boxes .box-form {
-  flex: 1.4 1 52rem;
-  height: 35rem;
-  background-color: #fff;
-  display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
-}
-.boxes .box-form__img {
-  height: 100%;
-}
-.boxes .box-form__right {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-direction: column;
 }
-.boxes .box-form__right-title {
-  font: 900 4.8rem "Gabarito", sans-serif;
-  color: #FFCB0B;
+.recomendacao__tag {
+  background-color: #EEBDC5;
+  padding: 0.8rem 2.4rem;
+  border-radius: 3.2rem;
+  font: 200 1.6rem/2.4rem "Gabarito", sans-serif;
+  font-size: 1rem;
   text-transform: uppercase;
+  color: #FEFEFD;
 }
-.boxes .box-form__right-txt {
-  font: 300 1.6rem/2.4rem "Gabarito", sans-serif;
-  color: #31302E;
-}
-.boxes .box-form__right-label {
-  font: 300 1.6rem/2.4rem "Gabarito", sans-serif;
+.recomendacao__line {
+  margin: 2.8rem 0 1.2rem;
   color: #838382;
-  margin: 1rem 0;
+  font: 200 1.6rem/2.4rem "Gabarito", sans-serif;
+  line-height: 2rem;
+  letter-spacing: 1px;
+  text-decoration: underline;
 }
-.boxes .box-form__right-input {
-  padding: 1rem 1.6rem;
-  border: 1px solid #838382;
-  outline: transparent;
-  width: 100%;
-  border-radius: 0.4rem;
-  box-sizing: border-box;
-}
-.boxes .box-form__right-input::placeholder {
-  color: #d9d9d9;
-}
-.boxes .box-form__right-btn {
+.recomendacao__btn {
+  text-transform: uppercase;
   border: none;
-  background: #FFCB0B;
-  font: 300 1.4rem "Gabarito", sans-serif;
+  background: #FFE06D;
+  font: 800 1.4rem "Gabarito", sans-serif;
   padding: 0.4rem 4rem;
   height: 3.6rem;
   border-radius: 0.4rem;
-  color: #31302E;
-  margin: 2rem 0;
+  color: #838382;
+  margin: 4rem 0 2rem;
   transition: all 0.25s ease-in;
   cursor: pointer;
-  text-transform: uppercase;
-  color: #FEFEFD;
 }
-.boxes .box-form__right-btn:hover {
+.recomendacao__btn:hover {
   background: #FFE06D;
+}
+.recomendacao img {
+  width: 62rem;
+  height: 62rem;
+  object-fit: cover;
+  border-radius: 2rem;
+}
+@media screen and (max-width: 1024px) {
+  .recomendacao {
+    flex-direction: column;
+  }
+  .recomendacao-info {
+    padding: 2rem;
+    box-sizing: border-box;
+  }
+  .recomendacao__btn {
+    display: block;
+    padding: 1.2rem 8rem;
+    margin: 4.8rem auto;
+  }
+  .recomendacao img {
+    width: 100%;
+    height: 40rem;
+  }
+}
+
+.boxes {
+  margin-top: 4rem;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: space-between;
+  flex-direction: row;
+  display: flex;
+}
+.boxes__img {
+  width: 40rem;
+  height: 36rem;
+  object-fit: cover;
+  border-radius: 1.2rem;
+}
+.boxes__categorias {
+  font: 900 3.2rem "Gabarito", sans-serif;
+  color: #31302E;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 2rem 0;
 }
 @media screen and (max-width: 1024px) {
   .boxes {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-direction: column;
-    flex-wrap: wrap;
     margin-top: 5rem;
     gap: 4rem;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
   }
-  .boxes .box {
+  .boxes__img {
     width: 100%;
-    border: 1px solid #d9d9d9;
-    padding: 4rem 2rem;
-    box-sizing: border-box;
-    gap: 2rem;
-    border-radius: 0.8rem;
-  }
-  .boxes .box-form {
+    border-radius: 0;
     height: auto;
-    flex-direction: column;
-    width: 100%;
-  }
-  .boxes .box-form__img {
-    height: 24rem;
-    width: 100%;
-    object-fit: cover;
-    object-position: bottom;
-    border-top-left-radius: 0.4rem;
-    border-top-right-radius: 0.4rem;
-  }
-  .boxes .box-form__right {
-    width: 100%;
-    padding: 1.6rem;
-    box-sizing: border-box;
-  }
-  .boxes .box-form__right-btn {
-    width: 100%;
   }
 }
 
-.unidades {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: 5rem 0;
-  gap: 1.6rem;
-}
-.unidades-franquias {
-  display: flex;
+.contato {
+  gap: 2.8rem;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: row;
-  margin: 5rem auto;
-  gap: 3.2rem;
-}
-.unidades__plans {
-  border-radius: 0.4rem;
-  box-sizing: border-box;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
-  min-height: 52rem;
-}
-.unidades__plans-img {
-  width: 36rem;
-  height: 35rem;
-  object-fit: cover;
-}
-.unidades__plans-main {
-  position: relative;
-  width: 100%;
-  height: 5.6rem;
-  background-color: #FFCB0B;
-}
-.unidades__plans-title {
-  font: 900 3.2rem "Gabarito", sans-serif;
-  color: #FEFEFD;
-  text-transform: uppercase;
-  text-align: center;
-  padding-top: 1rem;
-}
-.unidades__plans-txt {
-  font: 300 2rem/2.4rem "Gabarito", sans-serif;
-  color: #838382;
-  text-align: center;
-  padding: 0 2.8rem;
-  margin: 2.8rem 0;
-  box-sizing: border-box;
-}
-.unidades__plans-btn {
-  position: absolute;
-  right: 1rem;
-  top: 1rem;
-  width: 4rem;
-  height: 4rem;
-  border-radius: 50%;
-  background-color: transparent;
-  align-content: center;
-  transition: all 0.25s ease-in;
-  cursor: pointer;
-}
-.unidades__plans-btn:hover {
-  transform: scale(1.05);
-}
-.unidades__plans-btn i {
-  display: block;
-  text-align: center;
-  margin: auto;
-  color: #FEFEFD;
-  font-size: 2rem;
-}
-.unidades__plans-dl {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  padding: 0.2rem 6.4rem;
-  box-sizing: border-box;
 }
-.unidades__plans-dl:first-of-type {
-  margin-top: 1rem;
+.contato__info {
+  flex: 1 1 56rem;
+  max-width: 56rem;
 }
-.unidades__plans-dl dt {
-  font: 800 1.6rem "Gabarito", sans-serif;
-  color: #31302E;
-}
-.unidades__plans-dl dd {
-  font: 300 1.6rem "Gabarito", sans-serif;
-  color: #838382;
-}
-@media screen and (max-width: 1024px) {
-  .unidades {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    gap: 3.2rem;
-  }
-  .unidades__plans-main {
-    padding: 0 2.8rem;
-    box-sizing: border-box;
-    width: 100%;
-  }
-  .unidades__plans-title {
-    font-size: 2.8rem;
-    box-sizing: border-box;
-    text-align: left;
-  }
-  .unidades-franquias {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-  }
-}
-
-.cards {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
+.contato__form {
+  flex: 1 1 56rem;
+  max-width: 56rem;
   gap: 1rem;
-}
-.cards .card {
-  display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: flex-start;
   flex-direction: column;
-  border-radius: 2rem;
-  background-color: #fff;
-  padding: 4.4rem 5.2rem;
-  box-sizing: border-box;
-  max-width: 52.2rem;
-  min-height: 40rem;
-  margin-top: 3.2rem;
-  transition: all 0.25s ease-in;
-}
-.cards .card:hover {
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
-}
-.cards .card__quote {
-  font: 300 3.2rem/4rem "Gabarito", sans-serif;
-}
-.cards .card__quote strong {
-  font: 800 8rem/8.4rem "Gabarito", sans-serif;
-  line-height: 1rem;
-  color: #31302E;
-}
-.cards .card__quote strong:last-child {
-  line-height: 3.2rem;
-}
-.cards .card__footer {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: row;
+}
+.contato__form select {
+  width: 100%;
+  padding: 2rem 1.2rem;
+  border: 1px solid #d9d9d9;
+  outline: none;
+  box-sizing: border-box;
+  appearance: none;
+  margin-bottom: 1rem;
+}
+.contato__form select:checked {
+  color: #d9d9d9;
+}
+.contato__form select:active {
+  color: #d9d9d9;
+}
+.contato__form select:focus {
+  color: #d9d9d9;
+}
+.contato__form select option {
+  color: #838382;
+}
+.contato__form select option[selected] {
+  color: #d9d9d9;
+}
+.contato__form fieldset {
+  margin: 1rem 0;
+  width: 100%;
+  gap: 1rem;
+}
+.contato__form label {
+  display: block;
+  font: 200 1.6rem/2.4rem "Gabarito", sans-serif;
+  color: #31302E;
+  margin: 0.4rem 0;
+  text-align: left;
+}
+.contato__form input, .contato__form textarea {
+  padding: 1.6rem 1rem;
+  border-radius: 0.2rem;
+  color: #838382;
+  border: 1px solid #838382;
+  outline: #838382;
+  width: 100%;
+  max-width: 63rem;
+  box-sizing: border-box;
+  font-family: "Gabarito", sans-serif;
+  margin: 0.4rem 0;
+  background: transparent;
+}
+.contato__form input::placeholder, .contato__form textarea::placeholder {
+  color: #838382;
+  font-family: "Gabarito", sans-serif;
+  letter-spacing: 0.8px;
+}
+.contato__form textarea {
+  height: 20rem;
+}
+.contato__form .submit {
+  width: 100%;
+  padding: 1.2rem 1rem;
+  background-color: #31302E;
+  color: #FEFEFD;
+  font-size: 1.4rem;
+  border: 0px solid transparent;
+  border-radius: 0.4rem;
   margin-top: 2rem;
-  gap: 2rem;
-}
-.cards .card__footer-img {
-  height: 7rem;
-}
-.cards .card__footer-title {
-  font: 300 3.2rem/4rem "Gabarito", sans-serif;
-  font-weight: 900;
-  letter-spacing: 1px;
-  color: #31302E;
-}
-.cards .card__footer-txt {
-  font: 300 2rem/2.4rem "Gabarito", sans-serif;
-  color: #31302E;
 }
 @media screen and (max-width: 1024px) {
-  .cards {
-    display: flex;
+  .contato__form {
+    padding: 0 1.2rem;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  .contato__form .submit {
+    width: 100%;
+    height: 5.6rem;
+  }
+}
+.contato__form label {
+  color: #31302E;
+  font: 200 1.6rem/2.4rem "Gabarito", sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.8px;
+}
+@media screen and (max-width: 1024px) {
+  .contato {
+    padding: 0 2rem;
+    box-sizing: border-box;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    display: flex;
   }
-  .cards .card {
-    padding: 2.4rem 2rem;
+  .contato__info {
+    flex: 0 0 100%;
   }
-  .cards .card__quote {
-    font: 300 2rem/2.4rem "Gabarito", sans-serif;
-  }
-  .cards .card__quote strong {
-    font: 900 4.8rem "Gabarito", sans-serif;
-  }
-  .cards .card__quote strong:last-child {
-    line-height: 2.8rem;
-  }
-  .cards .card__footer-title {
-    font: 300 2rem/2.4rem "Gabarito", sans-serif;
-    font-weight: 900;
-  }
-  .cards .card__footer-txt {
-    font: 300 1.6rem/2.4rem "Gabarito", sans-serif;
+  .contato__form {
+    flex: 0 0 100%;
   }
 }
 
-.box-faq {
-  display: block;
-  border: 0 solid transparent;
-  border-radius: 0.8rem;
-  background: linear-gradient(90deg, #ED6928, #F5B958);
-  width: 95%;
-  height: 8.8rem;
-  margin: 2rem auto;
-  transition: all 0.25s ease-in;
+.local {
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  display: flex;
 }
-.box-faq--active {
-  display: block;
-  border: 0 solid transparent;
-  border-radius: 0.8rem;
-  background: linear-gradient(90deg, #ED6928, #F5B958);
-  width: 95%;
-  overflow: hidden;
-  height: 16rem;
-  margin: 2rem auto;
+.local__info {
+  flex: 1 1 56rem;
+}
+.local__location {
+  flex: 1 1 56rem;
 }
 @media screen and (max-width: 1024px) {
-  .box-faq {
+  .local {
+    flex-direction: column;
+    padding: 0 2rem;
+    box-sizing: border-box;
+  }
+  .local__info {
+    flex: 0 0 100%;
+  }
+  .local__location {
     width: 100%;
-    height: 8rem;
+    height: 50%;
+    object-fit: cover;
+    flex: 0 0 100%;
   }
 }
 
-.box-faq__question {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  padding: 2rem 7rem;
-  box-sizing: border-box;
-  cursor: pointer;
+.banner {
+  position: relative;
 }
-.box-faq__question .faq {
-  color: #FEFEFD;
-  font: 300 3.2rem/4rem "Gabarito", sans-serif;
-  margin-right: 2rem;
-}
-.box-faq__question .fi-ts-angle-small-down {
-  font-size: 3.2rem;
-  transition: all 0.25s ease-in;
-  color: #FEFEFD;
-}
-
-.response {
-  display: none;
-  transition: all 0.25s ease-in;
-}
-.response--active {
-  display: block;
-  margin: 0 12rem 0 6.4rem;
-  text-align: left;
-  font: 300 1.6rem/2rem "Gabarito", sans-serif;
-  color: #31302E;
+.banner img {
+  width: 100%;
+  height: 30rem;
+  object-fit: cover;
   z-index: -1;
 }
-.response--active a {
-  color: inherit;
-  font: inherit;
-  text-decoration: underline;
-}
-.response--active a:visited {
-  color: inherit;
+.banner .title__banner {
+  position: absolute;
+  top: 8rem;
+  left: 32rem;
 }
 
-.form {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-direction: column;
-  margin: 5.2rem 8rem;
-}
-.form select {
+.about-img {
   width: 100%;
-  padding: 2rem 1.2rem;
-  border: 1px solid #d9d9d9;
-  outline: none;
-  box-sizing: border-box;
-  appearance: none;
-  margin-bottom: 1rem;
+  height: 62rem;
+  object-fit: cover;
+  border-radius: 1.2rem;
+  margin: 2rem 0;
 }
-.form select:checked {
-  color: #d9d9d9;
-}
-.form select:active {
-  color: #d9d9d9;
-}
-.form select:focus {
-  color: #d9d9d9;
-}
-.form select option {
-  color: #838382;
-}
-.form select option[selected] {
-  color: #d9d9d9;
-}
-.form fieldset {
-  margin: 1rem 0;
-  width: 100%;
-  gap: 1rem;
-}
-.form fieldset label {
-  display: block;
-  font: 300 2rem/2.4rem "Gabarito", sans-serif;
-  color: #FEFEFD;
-  margin: 1.6rem 0;
-}
-.form fieldset input, .form fieldset textarea {
-  padding: 2rem 1.2rem;
-  border-radius: 0.4rem;
-  border: 1px solid transparent;
-  outline: none;
-  width: 100%;
-  max-width: 63rem;
-  box-sizing: border-box;
-}
-.form fieldset input::placeholder, .form fieldset textarea::placeholder {
-  color: #d9d9d9;
-  font-family: 300 1.6rem/2.4rem "Gabarito", sans-serif;
-  letter-spacing: 0.8px;
-}
-.form fieldset textarea {
-  height: 24rem;
-}
-.form .submit {
-  width: 24rem;
-  padding: 1.2rem 1rem;
-  background-color: #31302E;
-  color: #FEFEFD;
-  font-size: 1.4rem;
-  border: 0px solid transparent;
-  border-radius: 0.4rem;
-  margin-top: 2rem;
-}
-@media screen and (max-width: 1024px) {
-  .form {
-    padding: 0 1.2rem;
-    box-sizing: border-box;
-    width: 100%;
-  }
-  .form fieldset {
-    margin: 0 auto;
-  }
-  .form .submit {
-    width: 100%;
-    height: 5.6rem;
-  }
-}
-.form-franqueado {
-  display: flex;
+
+.about__bloco {
   justify-content: space-between;
-  align-items: flex-start;
-  flex-direction: column;
-  margin: 4rem 8rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: row;
-  gap: 2rem;
-  height: auto;
-}
-.form-franqueado select {
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
-  padding: 2rem 1.2rem;
-  border: 1px solid #d9d9d9;
-  outline: none;
-  box-sizing: border-box;
-  appearance: none;
-  margin-bottom: 1rem;
+  gap: 3.6rem;
 }
-.form-franqueado select:checked {
-  color: #d9d9d9;
+.about__bloco img {
+  flex: 1 1 40rem;
+  max-width: 40rem;
+  border-radius: 1.2rem;
 }
-.form-franqueado select:active {
-  color: #d9d9d9;
-}
-.form-franqueado select:focus {
-  color: #d9d9d9;
-}
-.form-franqueado select option {
-  color: #838382;
-}
-.form-franqueado select option[selected] {
-  color: #d9d9d9;
-}
-.form-franqueado fieldset {
-  margin: 1rem 0;
-  width: 100%;
-  gap: 1rem;
-}
-.form-franqueado fieldset label {
-  display: block;
-  font: 300 2rem/2.4rem "Gabarito", sans-serif;
-  color: #FEFEFD;
-  margin: 1.6rem 0;
-}
-.form-franqueado fieldset input, .form-franqueado fieldset textarea {
-  padding: 2rem 1.2rem;
-  border-radius: 0.4rem;
-  border: 1px solid transparent;
-  outline: none;
-  width: 100%;
-  max-width: 63rem;
-  box-sizing: border-box;
-}
-.form-franqueado fieldset input::placeholder, .form-franqueado fieldset textarea::placeholder {
-  color: #d9d9d9;
-  font-family: 300 1.6rem/2.4rem "Gabarito", sans-serif;
-  letter-spacing: 0.8px;
-}
-.form-franqueado fieldset textarea {
-  height: 24rem;
-}
-.form-franqueado .submit {
-  width: 24rem;
-  padding: 1.2rem 1rem;
-  background-color: #31302E;
-  color: #FEFEFD;
-  font-size: 1.4rem;
-  border: 0px solid transparent;
-  border-radius: 0.4rem;
-  margin-top: 2rem;
+.about__bloco-info {
+  flex: 1 1 56rem;
+  margin: 10rem 0;
 }
 @media screen and (max-width: 1024px) {
-  .form-franqueado {
-    padding: 0 1.2rem;
+  .about__bloco {
+    gap: 2rem;
+  }
+  .about__bloco img {
+    flex: 0 0 100%;
+  }
+  .about__bloco-info {
+    flex: 0 0 100%;
+    margin: 5rem 0;
+    padding: 0 2rem;
     box-sizing: border-box;
-    width: 100%;
-  }
-  .form-franqueado fieldset {
-    margin: 0 auto;
-  }
-  .form-franqueado .submit {
-    width: 100%;
-    height: 5.6rem;
-  }
-}
-.form-franqueado .submit {
-  width: 100%;
-  background-color: #009951;
-  height: 5.4rem;
-  color: #fff;
-  border-radius: 0.8rem;
-  font: 300 2rem/2.4rem "Gabarito", sans-serif;
-  font-weight: 800;
-  margin-top: 4rem;
-  text-transform: uppercase;
-}
-@media screen and (max-width: 1024px) {
-  .form-franqueado {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-direction: column;
-    margin: 0 auto;
-    gap: 0px;
-  }
-  .form-franqueado select {
-    width: 100%;
-    padding: 2rem 1.2rem;
-    border: 1px solid #d9d9d9;
-    outline: none;
-    box-sizing: border-box;
-    appearance: none;
-    margin-bottom: 1rem;
-  }
-  .form-franqueado select:checked {
-    color: #d9d9d9;
-  }
-  .form-franqueado select:active {
-    color: #d9d9d9;
-  }
-  .form-franqueado select:focus {
-    color: #d9d9d9;
-  }
-  .form-franqueado select option {
-    color: #838382;
-  }
-  .form-franqueado select option[selected] {
-    color: #d9d9d9;
-  }
-  .form-franqueado fieldset {
-    margin: 1rem 0;
-    width: 100%;
-    gap: 1rem;
-  }
-  .form-franqueado fieldset label {
-    display: block;
-    font: 300 2rem/2.4rem "Gabarito", sans-serif;
-    color: #FEFEFD;
-    margin: 1.6rem 0;
-  }
-  .form-franqueado fieldset input, .form-franqueado fieldset textarea {
-    padding: 2rem 1.2rem;
-    border-radius: 0.4rem;
-    border: 1px solid transparent;
-    outline: none;
-    width: 100%;
-    max-width: 63rem;
-    box-sizing: border-box;
-  }
-  .form-franqueado fieldset input::placeholder, .form-franqueado fieldset textarea::placeholder {
-    color: #d9d9d9;
-    font-family: 300 1.6rem/2.4rem "Gabarito", sans-serif;
-    letter-spacing: 0.8px;
-  }
-  .form-franqueado fieldset textarea {
-    height: 24rem;
-  }
-  .form-franqueado .submit {
-    width: 24rem;
-    padding: 1.2rem 1rem;
-    background-color: #31302E;
-    color: #FEFEFD;
-    font-size: 1.4rem;
-    border: 0px solid transparent;
-    border-radius: 0.4rem;
-    margin-top: 2rem;
-  }
-}
-@media screen and (max-width: 1024px) and (max-width: 1024px) {
-  .form-franqueado {
-    padding: 0 1.2rem;
-    box-sizing: border-box;
-    width: 100%;
-  }
-  .form-franqueado fieldset {
-    margin: 0 auto;
-  }
-  .form-franqueado .submit {
-    width: 100%;
-    height: 5.6rem;
   }
 }
 
 a {
-  font: 300 1.6rem/2.4rem "Gabarito", sans-serif;
+  font: 200 1.6rem/2.4rem "Gabarito", sans-serif;
+  line-height: 1.6rem;
   color: #FEFEFD;
   text-decoration: none;
 }
 a:visited {
   text-decoration: underline;
+}
+
+.sub {
+  font: 800 1.6rem "Gabarito", sans-serif;
+  color: #31302E;
+}
+
+.carrinho {
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  display: flex;
+}
+.carrinho__cards {
+  gap: 2.4rem;
+  padding: 2rem;
+  box-sizing: border-box;
+  border: 1px solid #838382;
+  width: 80%;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  transition: all 0.25s ease-in;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  display: flex;
+}
+.carrinho__cards:hover {
+  transform: scale(1.005);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
+}
+.carrinho__cards-img {
+  width: 16rem;
+  height: 16rem;
+  object-fit: cover;
+  border-radius: 0.4rem;
+}
+.carrinho__title {
+  font: 900 3.2rem "Gabarito", sans-serif;
+  color: #31302E;
+}
+.carrinho__buttons {
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  display: flex;
+}
+.carrinho__buttons--back {
+  border: none;
+  background: #838382;
+  font: 800 1.4rem "Gabarito", sans-serif;
+  padding: 0.4rem 4rem;
+  height: 3.6rem;
+  border-radius: 0.4rem;
+  color: #FEFEFD;
+  margin: 2rem 0;
+  transition: all 0.25s ease-in;
+  cursor: pointer;
+}
+.carrinho__buttons--back:hover {
+  background: #d9d9d9;
+}
+.carrinho__buttons--confirm {
+  border: none;
+  background: #009951;
+  font: 800 1.4rem "Gabarito", sans-serif;
+  padding: 0.4rem 4rem;
+  height: 3.6rem;
+  border-radius: 0.4rem;
+  color: #FEFEFD;
+  margin: 2rem 0;
+  transition: all 0.25s ease-in;
+  cursor: pointer;
+}
+.carrinho__buttons--confirm:hover {
+  background: #5f9a6a;
+}
+@media screen and (max-width: 1024px) {
+  .carrinho__cards {
+    width: 100%;
+  }
+  .carrinho__buttons {
+    width: 100%;
+  }
+  .carrinho__buttons--back {
+    padding: 0.8rem 3.2rem;
+    height: 4.8rem;
+  }
+  .carrinho__buttons--confirm {
+    padding: 0.8rem 3.2rem;
+    height: 4.8rem;
+  }
 }
 
 .modal {
@@ -1277,7 +1598,7 @@ a:visited {
   background-color: #838382;
 }
 .modal__links {
-  font: 300 2rem/2.4rem "Gabarito", sans-serif;
+  font: 300 2.4rem/2.8rem "Gabarito", sans-serif;
   text-transform: uppercase;
   color: #31302E;
   text-align: center;
@@ -1288,416 +1609,24 @@ a:visited {
   color: #FFCB0B;
 }
 .modal__links--btn {
-  border: none;
-  background: #FFCB0B;
-  font: 300 1.4rem "Gabarito", sans-serif;
-  padding: 1.2rem 6rem;
-  height: 3.6rem;
-  border-radius: 0.4rem;
-  color: #31302E;
-  margin: 1.2rem auto;
-  transition: all 0.25s ease-in;
-  cursor: pointer;
   text-align: center;
   text-transform: uppercase;
   color: #fff;
   height: auto;
   width: 16rem;
-}
-.modal__links--btn:hover {
-  background: #FFE06D;
-}
-
-.contact {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: row;
-  gap: 2.8rem;
-}
-.contact .radio-group {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: row;
-  gap: 4rem;
-  margin: 1rem 0;
-}
-.contact .radio-group input[type=radio] {
-  width: 3rem;
-}
-.contact__dsc {
-  flex: 1 1 56rem;
-  max-width: 40rem;
-}
-.contact__dsc .title, .contact__dsc .franquias__title, .contact__dsc .horarios__registry-title, .contact__dsc .txt, .contact__dsc .franquias__txt {
-  text-align: left;
-}
-.contact__dsc .title, .contact__dsc .franquias__title, .contact__dsc .horarios__registry-title {
-  color: #31302E;
-  text-align: left;
-}
-.contact__locale {
-  flex: 1 1 63rem;
-  width: 100%;
-}
-.contact__locale--img {
-  width: 100%;
-  object-fit: cover;
-  margin-bottom: 2.8rem;
-  border-radius: 0.4rem;
-}
-.contact__form {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-direction: column;
-  margin: 0;
-}
-.contact__form select {
-  width: 100%;
-  padding: 2rem 1.2rem;
-  border: 1px solid #d9d9d9;
-  outline: none;
-  box-sizing: border-box;
-  appearance: none;
-  margin-bottom: 1rem;
-}
-.contact__form select:checked {
-  color: #d9d9d9;
-}
-.contact__form select:active {
-  color: #d9d9d9;
-}
-.contact__form select:focus {
-  color: #d9d9d9;
-}
-.contact__form select option {
-  color: #838382;
-}
-.contact__form select option[selected] {
-  color: #d9d9d9;
-}
-.contact__form fieldset {
-  margin: 1rem 0;
-  width: 100%;
-  gap: 1rem;
-}
-.contact__form fieldset label {
-  display: block;
-  font: 300 2rem/2.4rem "Gabarito", sans-serif;
-  color: #31302E;
-  margin: 1.6rem 0;
-}
-.contact__form fieldset input, .contact__form fieldset textarea {
-  padding: 2rem 1.2rem;
-  border-radius: 0.4rem;
-  border: 1px solid #838382;
-  outline: #838382;
-  width: 100%;
-  max-width: 63rem;
-  box-sizing: border-box;
-}
-.contact__form fieldset input::placeholder, .contact__form fieldset textarea::placeholder {
-  color: #d9d9d9;
-  font-family: 300 1.6rem/2.4rem "Gabarito", sans-serif;
-  letter-spacing: 0.8px;
-}
-.contact__form fieldset textarea {
-  height: 24rem;
-}
-.contact__form .submit {
-  width: 24rem;
-  padding: 1.2rem 1rem;
-  background-color: #31302E;
-  color: #FEFEFD;
-  font-size: 1.4rem;
-  border: 0px solid transparent;
-  border-radius: 0.4rem;
-  margin-top: 2rem;
-}
-@media screen and (max-width: 1024px) {
-  .contact__form {
-    padding: 0 1.2rem;
-    box-sizing: border-box;
-    width: 100%;
-  }
-  .contact__form fieldset {
-    margin: 0 auto;
-  }
-  .contact__form .submit {
-    width: 100%;
-    height: 5.6rem;
-  }
-}
-.contact__form fieldset {
-  padding: 1rem 0;
-}
-.contact__form fieldset label {
-  margin: 0;
-  margin-bottom: 1rem;
-}
-.contact__form fieldset input, .contact__form fieldset textarea {
-  max-width: 100%;
-}
-@media screen and (max-width: 1024px) {
-  .contact {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-  }
-  .contact__dsc {
-    width: 100%;
-    padding: 0 1rem;
-    box-sizing: border-box;
-  }
-  .contact__locale {
-    width: 100%;
-    padding: 0 1rem;
-    box-sizing: border-box;
-  }
-}
-
-.unity {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  gap: 10rem;
-}
-.unity__row {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-direction: row;
-  gap: 2rem;
-}
-.unity__row-info {
-  flex: 1 1 63rem;
-  max-width: 63rem;
-}
-.unity__row-info .title, .unity__row-info .franquias__title, .unity__row-info .horarios__registry-title, .unity__row-info .txt, .unity__row-info .franquias__txt {
-  text-align: left;
-}
-.unity__row-info .txt, .unity__row-info .franquias__txt {
-  font: 300 2rem/2.4rem "Gabarito", sans-serif;
-}
-.unity__row-img {
-  width: 63rem;
-  height: 62rem;
-  object-fit: cover;
-}
-.unity__row .tags {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  gap: 1rem;
-}
-.unity__row .tag {
-  background: linear-gradient(90deg, #ED6928, #F5B958);
-  width: 16rem;
-  padding: 1.2rem 0;
-  font: 300 2rem/2.4rem "Gabarito", sans-serif;
-  font-weight: 800;
-  text-align: center;
-  color: #fff;
-  text-transform: uppercase;
-}
-.unity__row .tag--deactive {
-  border: 1px solid #FFCB0B;
-  min-width: 11rem;
-  padding: 1.2rem 0;
-  border-radius: 0.4rem;
-  color: #FFCB0B;
-  font: 300 2rem/2.4rem "Gabarito", sans-serif;
-}
-@media screen and (max-width: 1024px) {
-  .unity {
-    width: 100%;
-  }
-  .unity__row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-  }
-  .unity__row:nth-last-of-type(1) .unity__row-info {
-    order: 9;
-  }
-  .unity__row:nth-of-type(2) .unity__row-info {
-    order: 9;
-  }
-  .unity__row-info {
-    flex: 0 0 100%;
-  }
-  .unity__row-img {
-    width: 100%;
-  }
-  .unity__row .tags {
-    gap: 0.4rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-  }
-  .unity__row .tags .tag, .unity__row .tags .tag--deactive {
-    width: 100%;
-    height: 4.8rem;
-  }
-}
-
-.horarios__filtros {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
-  flex-direction: column;
-  float: right;
-  width: 50%;
-  margin-bottom: 5rem;
-}
-.horarios__filtros label {
-  font: 300 2rem/2.4rem "Gabarito", sans-serif;
-  color: #31302E;
-}
-.horarios__filtros select {
-  width: 100%;
-  padding: 2rem 1.2rem;
-  border: 1px solid #d9d9d9;
-  outline: none;
-  box-sizing: border-box;
-  appearance: none;
-  margin-bottom: 1rem;
-}
-.horarios__filtros select:checked {
-  color: #d9d9d9;
-}
-.horarios__filtros select:active {
-  color: #d9d9d9;
-}
-.horarios__filtros select:focus {
-  color: #d9d9d9;
-}
-.horarios__filtros select option {
-  color: #838382;
-}
-.horarios__filtros select option[selected] {
-  color: #d9d9d9;
-}
-.horarios__tab {
-  width: 100%;
-}
-.horarios__tab-daynumb {
-  font: 900 4.8rem "Gabarito", sans-serif;
-  color: #31302E;
-}
-.horarios__tab-day {
-  font: 300 1.6rem/2.4rem "Gabarito", sans-serif;
-  color: #838382;
-  letter-spacing: 1px;
-}
-.horarios__tab-row {
-  background-color: #FFCB0B;
-  width: 100%;
-  box-sizing: border-box;
-}
-.horarios__tab-row td {
-  font: 800 1.4rem/2rem "Gabarito", sans-serif;
-  color: #FEFEFD;
-  padding: 1.6rem 2rem;
-  width: 100%;
-}
-.horarios__tab--datetime {
-  width: 18.2rem;
-  border-left: 1px solid #31302E;
-  border-right: 1px solid #31302E;
-}
-.horarios__registry {
-  display: block;
-  margin: 1rem auto;
-  width: 17.6rem;
-  max-height: 28rem;
-  background-color: #31302E;
-  padding: 2.4rem 1rem;
-  box-sizing: border-box;
-  border-radius: 0.8rem;
-}
-.horarios__registry-tag {
-  border: 1px solid #FFCB0B;
-  background: transparent;
-  font: 300 1.4rem "Gabarito", sans-serif;
-  padding: 0.2rem 2.4rem;
-  height: 3.6rem;
-  border-radius: 50rem;
-  color: #31302E;
-  margin: 1rem 0;
-  transition: all 0.25s ease-in;
-  cursor: pointer;
-  text-transform: uppercase;
-  color: transparent;
-  background: linear-gradient(90deg, #ED6928, #F5B958);
-  font-weight: 400;
-  width: 12.8rem;
-  height: 3rem;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  letter-spacing: 1px;
-}
-.horarios__registry-tag:hover {
-  background: transparent;
-}
-.horarios__registry-tag:hover {
-  color: #FEFEFD;
-}
-.horarios__registry .fi-rr-octagon-exclamation {
-  color: #FFCB0B;
-  font-size: 2rem;
-}
-.horarios__registry-title {
-  font-size: 3.2rem;
-  line-height: 3.6rem;
-  color: #FEFEFD;
-  text-align: left;
-}
-.horarios__registry-hour, .horarios__registry-prof {
-  font: 300 2rem/2.4rem "Gabarito", sans-serif;
-  color: #fff;
-  text-transform: uppercase;
-  margin: 1rem 0;
-}
-.horarios__registry-category {
   border: none;
-  background: #FFCB0B;
-  font: 300 1.4rem "Gabarito", sans-serif;
-  padding: 0.2rem 2.4rem;
+  background: #FFE06D;
+  font: 800 1.4rem "Gabarito", sans-serif;
+  padding: 1.2rem 6rem;
   height: 3.6rem;
   border-radius: 0.4rem;
-  color: #FEFEFD;
+  color: #838382;
   margin: 1.2rem auto;
   transition: all 0.25s ease-in;
   cursor: pointer;
-  text-transform: uppercase;
-  width: 14.4rem;
-  height: 3rem;
 }
-.horarios__registry-category:hover {
+.modal__links--btn:hover {
   background: #FFE06D;
-}
-@media screen and (max-width: 1024px) {
-  .horarios {
-    width: 100%;
-    overflow: scroll;
-  }
-  .horarios__filtros {
-    float: left;
-  }
-  .horarios__registry-title {
-    font-size: 3.6rem !important;
-  }
 }
 
 .whatsapp-fixed {
@@ -1733,159 +1662,68 @@ a:visited {
   color: #31302E;
 }
 
-.cardboxes {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-}
-.cardboxes .cardbox {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  max-width: 42rem;
-  width: 100%;
-  background-color: #FEFEFD;
-  padding: 2rem 3.2rem;
-  box-sizing: border-box;
-  height: 22rem;
-  gap: 2rem;
-  border-radius: 2rem;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
-}
-.cardboxes .cardbox__icon {
-  font-size: 6.4rem;
-  color: #FFCB0B;
-}
-.cardboxes .cardbox__txt {
-  font: 300 3.2rem/4rem "Gabarito", sans-serif;
-  color: #31302E;
-}
-@media screen and (max-width: 1024px) {
-  .cardboxes {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    gap: 1.6rem;
-  }
-  .cardboxes .cardbox {
-    border-radius: 0;
-    box-shadow: none;
-  }
-  .cardboxes .cardbox__icon {
-    font-size: 5.6rem;
-  }
-  .cardboxes .cardbox__txt {
-    font: 300 2rem/2.4rem "Gabarito", sans-serif;
-  }
-}
-
-.franquias {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-  flex-direction: column;
-  padding: 5rem 0 5rem 32rem;
-  width: 40%;
-  max-height: 92rem;
-  height: 80vh;
-  background: linear-gradient(90deg, #ED6928, #F5B958);
-  box-sizing: border-box;
-}
-.franquias__title {
-  color: #fff;
-  text-align: left;
-  padding-right: 2rem;
-}
-.franquias__txt {
-  color: #fff;
-  text-align: left;
-  padding-right: 2rem;
-}
-.franquias__opt, .franquias .deactive {
-  border: none;
-  background: #FFCB0B;
-  font: 300 1.4rem "Gabarito", sans-serif;
-  padding: 0.4rem 4rem;
-  height: 3.6rem;
-  border-radius: 0;
-  color: #fff;
-  margin: 1.2rem 0;
-  transition: all 0.25s ease-in;
-  cursor: pointer;
-  border-top-left-radius: 0.8rem;
-  border-bottom-left-radius: 0.8rem;
-  font: 800 4rem/4.2rem "Gabarito", sans-serif;
-  height: 7.2rem;
-}
-.franquias__opt:hover, .franquias .deactive:hover {
+footer {
   background: #FFE06D;
+  margin-top: 10rem;
 }
-.franquias .deactive {
-  background: #fff;
-  color: #FFCB0B;
-  transition: all 0.25s ease-in;
-}
-.franquias .deactive:hover {
-  background: #FEFEFD;
-  color: #FFE06D;
-}
-@media screen and (max-width: 1024px) {
-  .franquias {
-    width: 100%;
-    padding: 2rem 0 2rem 2rem;
-    height: auto;
-  }
-  .franquias__opt, .franquias .deactive {
-    border-radius: 0.4rem;
-    padding: 0.4rem 2rem;
-    margin: 1rem auto;
-    font: 800 2.4rem "Gabarito", sans-serif;
-    width: 88%;
-    height: 5.6rem;
-  }
-  .franquias .deactive {
-    background: #fff;
-  }
-}
-
-.passos {
+footer .foot {
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
   display: flex;
-  justify-content: center;
+}
+footer .foot .fi-brands-linkedin, footer .foot .fi-brands-instagram {
+  font-size: 2rem;
+  color: #31302E;
+  margin: 0 1.2rem;
+}
+footer .foot__column {
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  display: flex;
+}
+footer .foot__column img {
+  width: 24rem;
+}
+footer .foot__column-text {
+  gap: 1rem;
+  color: #31302E;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: row;
-  flex-wrap: wrap;
-  margin-top: 2rem;
-  gap: 2rem;
-}
-.passos__card {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 30rem;
-  height: 28rem;
-  border: 1px solid #FFCB0B;
-  border-radius: 1rem;
-  padding: 0 2rem;
-  box-sizing: border-box;
 }
-.passos__card-title {
-  font: 900 4.8rem "Gabarito", sans-serif;
+footer .foot__column-title {
+  font: 800 1.6rem "Gabarito", sans-serif;
   color: #31302E;
   text-transform: uppercase;
 }
-.passos__card-txt {
-  font: 300 3.2rem/4rem "Gabarito", sans-serif;
-  color: #838382;
-  text-align: center;
-  margin-top: 1.2rem;
+footer .foot__column-unidades {
+  font: 200 1.6rem/2.4rem "Gabarito", sans-serif;
+  color: #31302E;
+  margin: 1.6rem 0;
+  letter-spacing: 1px;
 }
-
-.foot-franqueado {
-  background-color: #31302E;
+footer .txt {
+  letter-spacing: 1.2px;
+  color: #31302E;
+}
+@media screen and (max-width: 1024px) {
+  footer .foot {
+    align-items: center;
+    flex-direction: column;
+  }
+  footer .foot__column {
+    margin: 2rem 0;
+    text-align: center;
+  }
+  footer .txt {
+    text-align: center;
+    padding: 0 2rem;
+    box-sizing: border-box;
+  }
 }
 
 @keyframes wpp {
@@ -1897,42 +1735,29 @@ a:visited {
   }
 }
 @media screen and (max-width: 1024px) {
-  .title, .horarios__registry-title, .franquias__title {
-    font: 900 4.8rem "Gabarito", sans-serif;
+  .title, .banner .title__banner {
+    font: 900 5.6rem "Gabarito", sans-serif;
   }
-  .txt, .franquias__txt {
-    font: 300 2rem/2.4rem "Gabarito", sans-serif;
+  .txt {
+    font: 200 1.6rem/2.4rem "Gabarito", sans-serif;
   }
-  .dsc-contato {
-    flex: 1 1 100%;
+  .sub {
+    padding: 0 2rem;
+    box-sizing: border-box;
+  }
+  .section__title {
+    gap: 1rem;
+  }
+  .section__title .title, .section__title .banner .title__banner, .banner .section__title .title__banner {
+    font-size: 4rem;
+    line-height: 4.8rem;
+  }
+  .banner .title__banner {
+    left: 2rem;
   }
   .form {
     flex: 0 0 100%;
     margin: 0 auto;
-  }
-  .modal__infos {
-    padding: 2rem;
-  }
-  .modal__img {
-    height: 35vh;
-    border-radius: 0;
-  }
-  .modal__img #item {
-    height: 35vh;
-    width: 100vw;
-  }
-  .box-faq {
-    height: 7.2rem;
-  }
-  .box-faq--active {
-    height: auto;
-    padding-bottom: 2rem;
-  }
-  .box-faq .faq {
-    font: 400 1.6rem/2rem "Gabarito", sans-serif;
-  }
-  .box-faq__question {
-    padding: 1rem 2rem;
   }
   .whatsapp-fixed {
     bottom: 8rem;

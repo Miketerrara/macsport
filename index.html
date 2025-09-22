@@ -42,19 +42,19 @@
                                     </div>                                    
                                     <div class="menu-itens">
                                         <div class="coluna">
-                                            <a href="#">Livres</a>
-                                            <a href="#">Strong</a>
-                                            <a href="#">Sigma</a>
+                                            <a href="produtos.html">Livres</a>
+                                            <a href="produtos.html">Strong</a>
+                                            <a href="produtos.html">Sigma</a>
                                         </div>
                                         <div class="coluna">
-                                            <a href="#">Uranos</a>
-                                            <a href="#">Cromus</a>
-                                            <a href="#">Evo</a>
+                                            <a href="produtos.html">Uranos</a>
+                                            <a href="produtos.html">Cromus</a>
+                                            <a href="produtos.html">Evo</a>
                                         </div>
                                     </div>
                                     
                                     <div class="menu-footer">
-                                        <a href="#">
+                                        <a href="produtos.html">
                                             Todas As Linhas <span class="seta">➜</span>
                                         </a>
                                     </div>
@@ -62,14 +62,14 @@
                             </div>                            
                         </li>
                         <li>
-                            <a href="unidades.html" class="nav-itens">quem somos</a>
+                            <a href="about.html" class="nav-itens">quem somos</a>
                         </li>
                         <li>
-                            <a href="vagas.html" class="nav-itens">contato</a>
+                            <a href="contato.html" class="nav-itens">contato</a>
                         </li>
                         <hr width="40px" style="rotate:90deg;">
                         <li>
-                            <a href="contact.html">
+                            <a href="#">
                                 <button type="button" class="nav-btn">
                                     assistência técnica
                                 </button>
@@ -81,14 +81,31 @@
                 <div class="menu-toggle">
                     <i class="fi fi-br-cross-small cross"></i>
                     <ul class="menu-toggle__position">
-                        <a href="horarios.html"><li class="menu-toggle__itens">produtos</li></a>
-                        <a href="unidades.html"><li class="menu-toggle__itens">quem somos</li></a>
-                        <a href="vagas.html"><li class="menu-toggle__itens">contato</li></a>
-                        <a href="contact.html"><li class="menu-toggle__itens">assistência técnica</li></a>
+                        <a href="produtos.html"><li class="menu-toggle__itens">produtos</li></a>
+                        <a href="about.html"><li class="menu-toggle__itens">quem somos</li></a>
+                        <a href="contato.html"><li class="menu-toggle__itens">contato</li></a>
+                        <a href="#"><li class="menu-toggle__itens assist">assistência técnica</li></a>
                     </ul>
                 </div>
             </div>
         </nav>
+        <div class="assistencia">
+            <button type="button">
+                <i class="fi fi-bs-exit"></i>
+            </button>
+            <h4 class="assistencia__title">Preencha o formulário para enviar a solicitação</h4>
+            <form action="" class="assistencia__form">
+                <label for="fullname">Nome Completo</label>
+                <input type="text" id="fullname" placeholder="Digite seu nome completo">
+                <label for="tel">Telefone</label>
+                <input type="text" id="tel" placeholder="(xx) xxxxx.xxxx">
+                <label for="email">E-mail</label>
+                <input type="text" id="email" placeholder="contato@seuemail.com.br">
+                <label for="mensagem">Descreva seu problema</label>
+                <textarea name="mensagem" id="mensagem" placeholder="Descreva o seu problem..."></textarea>
+                <input type="submit" value="Solicitar Assistência" class="submit">
+            </form>
+        </div>
     </header>
     <main>
         <section>
@@ -124,18 +141,18 @@
                     <div class="descubra__bloco">
                         <div class="descubra__bloco-info">
                             <span>Linha de equipamentos</span>
-                            <h3 class="title">Strong</h3>
-                            <p class="desc">Equipamentos para te trazer <span></span>o melhor resultado</p>
-                            <button type="button" class="descubra__bloco-btn">Descubra</button>
+                            <h3 class="title" data-line="strong">Strong</h3>
+                            <p class="desc">Equipamentos para te trazer<span></span>o melhor resultado</p>
+                            <button type="button" class="descubra__bloco-btn" id="strong">Descubra</button>
                         </div>
                         <img class="descubra__bloco-img" src="./_assets/descubra--strong.jpg" alt="Linha de equipamentos Strong">
                     </div>
                     <div class="descubra__bloco">
                         <div class="descubra__bloco-info">
                             <span>Linha de equipamentos</span>
-                            <h3 class="title">Livres</h3>
-                            <p class="desc">Equipamentos para te levar <span></span>a um passo adiante</p>
-                            <button type="button" class="descubra__bloco-btn">Descubra</button>
+                            <h3 class="title" data-line="livre">Livre</h3>
+                            <p class="desc">Equipamentos para te levar<span></span>a um passo adiante</p>
+                            <button type="button" class="descubra__bloco-btn" id="livre">Descubra</button>
                         </div>
                         <img class="descubra__bloco-img" src="./_assets/descubra--livre.jpg" alt="Linha de equipamentos Livres">
                     </div>
@@ -143,7 +160,7 @@
                 <hr width="100%">
                 <div class="section__title">
                     <h2 class="title">para fechar hoje</h2>
-                    <span class="title-timer">19:56:00</span>
+                    <span class="section__title-timer">19:56:00</span>
                 </div>
                 <div class="promote">
                     <div class="promote__bloco">
@@ -151,17 +168,17 @@
                         <div class="promote__bloco-info">
                             <span>Linha Sigma</span>
                             <div class="title">Leg Horizontal</div>
-                            <div class="classify"></div>
+                            <div class="classify"><i class="fi fi-rr-star"></i><i class="fi fi-rr-star"></i><i class="fi fi-rr-star"></i><i class="fi fi-rr-star"></i><i class="fi fi-rr-star"></i></div>
                             <button class="promote__bloco-btn">Quero Levar!</button>
                         </div>
                     </div>
                     <div class="promote__bloco">
                         <img src="./_assets/promote-2.jpg" alt="" class="promote__bloco-img">
-                        <div class="promote__bloco-info">
+                        <div>
                             <span>Linha Sigma</span>
-                            <div class="title">Leg Horizontal</div>
-                            <div class="classify"></div>
-                            <button class="promote__bloco-btn">Quero Levar!</button>
+                            <div class="title">Abdominal Máquina</div>
+                            <div class="classify"><i class="fi fi-rr-star"></i><i class="fi fi-rr-star"></i><i class="fi fi-rr-star"></i><i class="fi fi-rr-star"></i><i class="fi fi-rr-star"></i></div>
+                            <a href="http://" target="_blank" rel="noopener noreferrer"><button class="promote__bloco-btn">Quero Levar!</button></a>
                         </div>
                     </div>
                 </div>
@@ -171,13 +188,14 @@
             <div class="container">
                 <div class="recomendacao">
                     <img src="./_assets/recomendacao.jpg" alt="Extensora Uranos">
-                    <div class="recomendacao__info">
-                        <span class="tag">revendedores recomendam</span><span class="recomendacao__info-line">Linha Uranos</span>
+                    <div class="recomendacao-info">
+                        <span class="recomendacao__tag">revendedores recomendam</span><br>
+                        <p class="recomendacao__line">Linha Uranos</p>
                         <h3 class="title">Robustez e desempenho</h3>
                         <p class="txt">
                             Cada aparelho da linha Uranos apresenta acabamento premium e tecnologia de ponta: carenagens com fechamento total em PS de alto impacto, pintura eletrostática resistente à corrosão e soldagem MIG de alta precisão garantem durabilidade e proteção mesmo sob uso intenso.
                         </p>
-                        <button class="recomendacao__info-btn">Ver linha completa</button>
+                        <button class="recomendacao__btn">Ver linha completa</button>
                     </div>
                 </div>
                 <hr width="100%">
@@ -186,69 +204,756 @@
         <section>
             <div class="container">
                 <h2 class="title">Os melhores</h2>
-                <div class="the-bests">
-                    <div class="the-bests__bloco">
-                        <a href="">
-                            <img src="" alt="">
-                            <h4 class="categorias">Livre</h4>
-                        </a>
-                    </div>
-                    <div class="the-bests__bloco">
-                        <a href="">
-                            <img src="" alt="">
-                            <h4 class="categorias">Livre</h4>
-                        </a>
-                    </div>
-                    <div class="the-bests__bloco">
-                        <a href="">
-                            <img src="" alt="">
-                            <h4 class="categorias">Livre</h4>
-                        </a>
-                    </div>
+                <div class="boxes">
+                    <button type="button" class="boxes__item" data-line="livre">
+                        <img src="./_assets/melhores-livre.jpg" class="boxes__img" alt="">
+                        <h4 class="boxes__categorias">Livre</h4>
+                    </a>
+                    <button type="button" class="boxes__item" data-line="cromus">
+                        <img src="./_assets/melhores-cromus.jpg" class="boxes__img" alt="">
+                        <h4 class="boxes__categorias">Cromus</h4>
+                    </button>
+                    <button type="button" class="boxes__item" data-line="evo">
+                        <img src="./_assets/melhores-evo.jpg" class="boxes__img" alt="">
+                        <h4 class="boxes__categorias">Evo</h4>
+                    </button>
                 </div>
             </div>
-
         </section>
     </main>
+    <section id="produtos">
+        <div class="container__produtos">
+            <div class="produtos">                    
+                <div class="produtos__sidebar">
+                    <div class="produtos__sidebar-itens">
+                        <button type="button" class="produtos__sidebar-btn">
+                            Musculação <i class="fi fi-br-angle-small-right produtos-symbol"></i>
+                        </button>
+                        <div class="seletores">
+                            <div>
+                                <input onclick="filter()" type="checkbox" name="livre" id="livre" class="check"><label for="livre">Livre</label>
+                            </div>
+                            <div>
+                                <input onclick="filter( )" type="checkbox" name="strong" id="strong" class="check"><label for="strong">Strong</label>
+                            </div>
+                            <div>
+                                <input onclick="filter()" type="checkbox" name="sigma" id="sigma" class="check"><label for="sigma">Sigma</label>
+                            </div>
+                            <div>
+                                <input onclick="filter()" type="checkbox" name="evo" id="evo" class="check"><label for="evo">Evo</label>
+                            </div>
+                            <div>
+                                <input onclick="filter()" type="checkbox" name="uranos" id="uranos" class="check"><label for="uranos">Uranos</label>
+                            </div>
+                            <div>
+                                <input onclick="filter()" type="checkbox" name="cromus" id="cromus" class="check"><label for="cromus">Cromus</label>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="produtos__sidebar-itens">
+                        <button type="button" class="produtos__sidebar-btn">
+                            Cardio <i class="fi fi-br-angle-small-right produtos-symbol"></i>
+                        </button>
+                        <div class="seletores">
+                            <div>
+                                <input onclick="filter()" type="checkbox" name="noturno" id="noturno" class="check"><label for="noturno">Esteiras</label>
+                            </div>
+                            <div>
+                                <input  onclick="filter()"type="checkbox" name="diurno" id="diurno" class="check"><label for="diurno">Bicicletas</label>
+                            </div>
+                            <div>
+                                <input  onclick="filter()"type="checkbox" name="diurno" id="diurno" class="check"><label for="diurno">Elipticos</label>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="produtos__sidebar-itens">
+                        <button type="button" class="produtos__sidebar-btn">
+                            Estações <i class="fi fi-br-angle-small-right produtos-symbol"></i>
+                        </button>
+                        <div class="seletores">
+                            <div>
+                                <input onclick="filter()" type="checkbox" name="sao paulo" class="check"><label for="sp">Semi-profissionais</label>
+                            </div>
+                            <div>
+                                <input onclick="filter()" type="checkbox" name="minas gerais" class="check"><label for="mg">Profissionais</label>
+                            </div>
+                        </div>                            
+                    </div>
+                </div>
+                <div class="produtos__cards">
+                    <div class="produtos__cards-filters">
+                        <p id="quantity">Mostrando 12 de 50 resultados</p>
+                        <div>
+                            <button type="button" class="column">
+                                <i class="fi fi-rr-apps"></i>
+                            </button>
+                            <button type="button" class="list">
+                                <i class="fi fi-rr-list"></i>
+                            </button>
+                            <button type="button" class="filter">
+                                <i class="fi fi-rr-filter-list"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="box__cards">
+                            <img src="./_assets/foto-cross-angular_01.jpg" alt="foto Cross Angular" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha Sigma</span>
+                            <h3 class="box__title">Cross Angular</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/foto-deltoide.jpg" alt="foto Deltoide" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha Sigma</span>
+                            <h3 class="box__title">Deltóide máquina</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/foto-extensora-c-flexora.jpg" alt="foto Extensora com Flexora" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha Sigma</span>
+                            <h3 class="box__title">Extensora c/ Flexora</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/foto-leg-horizontal.jpg" alt="foto Leg Horizontal" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha Sigma</span>
+                            <h3 class="box__title">Leg Press Horizontal</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/foto-leg-press.jpg" alt="foto Leg Press Regulável" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha Sigma</span>
+                            <h3 class="box__title">Leg Press Regulável</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/foto-supino.jpg" alt="foto Supino Multifuncional" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha Sigma</span>
+                            <h3 class="box__title">Supino Multifuncional</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/sigma/Flexo Extensora (1).jpeg" alt="" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha Sigma</span>
+                            <h3 class="box__title">Flexo Extensora</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/evo/Apolete (2).png" alt="" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha EVO</span>
+                            <h3 class="box__title">Apolete</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/evo/Cross Angular (1).png" alt="" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha Evo</span>
+                            <h3 class="box__title">Cross Angular</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/evo/Cross com smith (2).png" alt="" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha EVO</span>
+                            <h3 class="box__title">Cross c/ Smith</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/evo/Extensora com flexora pantografica (4).png" alt="foto Cross Angular" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha EVO</span>
+                            <h3 class="box__title">Extensora c/ flexora</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/evo/Flexora Sentada (3).jpg" alt="foto Deltoide" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha EVO</span>
+                            <h3 class="box__title">Flexora Sentada</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/evo/Flexora vertical com rapid fire 1.jpg" alt="foto Extensora com Flexora" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha EVO</span>
+                            <h3 class="box__title">Flexora vertical</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/evo/Graviton (1).png" alt="foto Leg Horizontal" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha EVO</span>
+                            <h3 class="box__title">Graviton</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/evo/Leg horizontal (2).png" alt="foto Leg Press Regulável" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha EVO</span>
+                            <h3 class="box__title">Leg Horizontal</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/evo/Leg press regulavel (3).png" alt="foto Supino Multifuncional" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha EVO</span>
+                            <h3 class="box__title">Leg Press Regulável</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/evo/Panturrilha com agachamento (1).png" alt="" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha EVO</span>
+                            <h3 class="box__title">Panturrilha c/ agachamento</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/evo/Panturrilha vertical (1).png" alt="" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha EVO</span>
+                            <h3 class="box__title">Panturrilha vertical</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/evo/Peck Deck - (EV-0950) (1).png" alt="" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha EVI</span>
+                            <h3 class="box__title">Peck Deck</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/evo/Polia Regulavel Simples (1).png" alt="" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha EVO</span>
+                            <h3 class="box__title">Polia Regulável</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/evo/POLIA SIMPLES OBL 2.png" alt="" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha EVO</span>
+                            <h3 class="box__title">Polia simples Obl.</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/evo/Puxada baixa (1).png" alt="" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha EVO</span>
+                            <h3 class="box__title">Puxada baixa</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/evo/Supino Vertical Máquina (1).png" alt="" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha EVO</span>
+                            <h3 class="box__title">Supino Vertical</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/evo/Triceps maquina (2).png" alt="" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha EVO</span>
+                            <h3 class="box__title">Triceps Máquina</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/cromus/Apolete (1).png" alt="foto Cross Angular" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha Cromus</span>
+                            <h3 class="box__title">Apolete</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/cromus/Biceps maquina (1).png" alt="foto Deltoide" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha Cromus</span>
+                            <h3 class="box__title">Biceps Máquina</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/cromus/CR-0990_TRICEPS MÁQUINA 01.png" alt="foto Extensora com Flexora" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha Cromus</span>
+                            <h3 class="box__title">Triceps Máquina</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/cromus/Elevação lateral (1).png" alt="foto Leg Horizontal" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha Cromus</span>
+                            <h3 class="box__title">Elevação Lateral</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/cromus/Gluteo 4 apoio (1).png" alt="foto Leg Press Regulável" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha Cromus</span>
+                            <h3 class="box__title">Gluteo apoio</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/cromus/Peck-Deck - (CR-0950) (1).png" alt="foto Supino Multifuncional" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha Cromus</span>
+                            <h3 class="box__title">Peck Deck</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/cromus/POLIA BAIXA 4POL_Camera_SOLIDWORKS Viewport 3.png" alt="" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha Cromus</span>
+                            <h3 class="box__title">Polia Baixa</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/cromus/Polia regulavel simples (1).png" alt="" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha Cromus</span>
+                            <h3 class="box__title">Polia Regulável</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/uranos/Abdominal Maquina (2).jpeg" alt="" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha Uranos</span>
+                            <h3 class="box__title">Abdominal Máquina</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/uranos/Adutor com Abdutor Conjugado Uranos - Copia.jpg" alt="" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha Uranos</span>
+                            <h3 class="box__title">Adutor c/ Abdutor Conjugado</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/uranos/Cross angular (1).png" alt="foto Cross Angular" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha Uranos</span>
+                            <h3 class="box__title">Cross Angular</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/uranos/Cross com smith (1).png" alt="foto Deltoide" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha Uranos</span>
+                            <h3 class="box__title">Cross c/ Smith</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/uranos/Cross com Smith - Gancheira (1).png" alt="foto Extensora com Flexora" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha Uranos</span>
+                            <h3 class="box__title">Cross c/ Smith - Gancheira</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/uranos/Crossover Tradicional (1).jpeg" alt="foto Leg Horizontal" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha Uranos</span>
+                            <h3 class="box__title">Crossover</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/uranos/Deltoide Maquina - (UR-0860) (1).png" alt="foto Leg Press Regulável" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha Uranos</span>
+                            <h3 class="box__title">Deltoide Máquina</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/uranos/Desenv. Ombro Maquina (1).jfif" alt="foto Supino Multifuncional" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha Uranos</span>
+                            <h3 class="box__title">Desenv. Ombro</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/uranos/Elevação de Ombro (Deltoide).jpeg" alt="" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha Uranos</span>
+                            <h3 class="box__title">Elevação de Ombro</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/uranos/Elevação lateral (1).png" alt="" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha Uranos</span>
+                            <h3 class="box__title">Elevação Lateral</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/uranos/Extensora Uranos (1) - Copia.jpeg" alt="" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha Uranos</span>
+                            <h3 class="box__title">Extensora</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/uranos/Flexor com extensor.png" alt="" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha Uranos</span>
+                            <h3 class="box__title">Flexor c/ Extensor</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/uranos/FLexora Vertical (2).jpeg" alt="" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha Uranos</span>
+                            <h3 class="box__title">Flexora Vertical</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/uranos/Graviton Uranos  (1).jpeg" alt="" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha Uranos</span>
+                            <h3 class="box__title">Graviton</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/uranos/Peck Deck - (UR-0950) (2).png" alt="" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha Uranos</span>
+                            <h3 class="box__title">Peck Deck</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/uranos/Polia Alta (1).jpeg" alt="" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha Uranos</span>
+                            <h3 class="box__title">Polia Alta</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/uranos/Polia Baixa (Remada) (1).jpeg" alt="" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha Uranos</span>
+                            <h3 class="box__title">Polia Baixa Remada</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/uranos/Polia Reg. Simples - Uranos - Fixa na Parede.jpeg" alt="" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha Uranos</span>
+                            <h3 class="box__title">Polia Regulável</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/uranos/Projeto sem título 45.png" alt="" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha Uranos</span>
+                            <h3 class="box__title">Polia Alta</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/uranos/Pulley com Remada (1).jpg" alt="" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha Uranos</span>
+                            <h3 class="box__title">Pulley c/ Remada</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/uranos/Supino multifuncional (1).png" alt="" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha Uranos</span>
+                            <h3 class="box__title">Supino Multifuncional</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/uranos/Triceps maquina (2).png" alt="" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>Linha Uranos</span>
+                            <h3 class="box__title">Triceps Máquina</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/livres e articulado/Banco Nordico (1).jpg" alt="foto Extensora com Flexora" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>LInha Livre</span>
+                            <h3 class="box__title">Banco Nórdico</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/livres e articulado/Banco Regulavel - Oblongo - 77x40 (4).png" alt="foto Leg Horizontal" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>LInha Livre</span>
+                            <h3 class="box__title">Banco Regulável</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/livres e articulado/Banco sissy (1).png" alt="foto Leg Press Regulável" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>LInha Livre</span>
+                            <h3 class="box__title">Banco Sissy</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/livres e articulado/Banco Triceps (0-90).jpeg" alt="foto Supino Multifuncional" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>LInha Livre</span>
+                            <h3 class="box__title">Banco Triceps</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/livres e articulado/Cavalete para Barra (1).jpg" alt="" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>LInha Livre</span>
+                            <h3 class="box__title">Cavalete p/ Barra</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/livres e articulado/Elevação Lateral (Deltoide) (1).png" alt="" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>LInha Livre</span>
+                            <h3 class="box__title">Elevação Lateral</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/livres e articulado/ELEVAÇÃO PELVICA (1).png" alt="" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>LInha Livre</span>
+                            <h3 class="box__title">Elevação Pélvica</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/livres e articulado/Espaldar  (1).jpeg" alt="" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>LInha Livre</span>
+                            <h3 class="box__title">Espaldar</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/livres e articulado/Leg Press 45° (3).jpg" alt="" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>LInha Livre</span>
+                            <h3 class="box__title">Leg Press 45°</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/livres e articulado/LG-0435_BANCO DE SUPINO RETO OBL 2.jpg" alt="" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>LInha Livre</span>
+                            <h3 class="box__title">Supino Reto</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/livres e articulado/Polia Alta Articulada - (LP-0590) - LATERAL DIR..jpg" alt="" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>LInha Livre</span>
+                            <h3 class="box__title">Polia Alta Articulada</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/livres e articulado/condicionador-abdominal.png" alt="" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>LInha Livre</span>
+                            <h3 class="box__title">Cond. Abdominal Vertical</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/livres e articulado/banco-para-biceps_01.png" alt="" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>LInha Livre</span>
+                            <h3 class="box__title">Banco p/ Biceps</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/livres e articulado/Dorsal-45_01.png" alt="" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>LInha Livre</span>
+                            <h3 class="box__title">Dorsal 45°</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/livres e articulado/agachamento-sissy_01.png" alt="" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>LInha Livre</span>
+                            <h3 class="box__title">Agachamento Sissy</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/livres e articulado/panturrilha-vertical_01.png" alt="" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>LInha Livre</span>
+                            <h3 class="box__title">Panturrilha vertical</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/livres e articulado/panturrilha-sentada.png" alt="" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>LInha Livre</span>
+                            <h3 class="box__title">Panturrilha Sentada</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/livres e articulado/abdominal-45.png" alt="" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>LInha Livre</span>
+                            <h3 class="box__title">Abdominal 45°</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/livres e articulado/elevacao-pelvica_01.png" alt="" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>LInha Livre</span>
+                            <h3 class="box__title">Elevação Pélvica</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/livres e articulado/Remada Cavalinho  LP-0245 (1).png" alt="" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>LInha Livre</span>
+                            <h3 class="box__title">Remada Cavalinho</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/livres e articulado/Smith de Parede -  LP-0255_1.png" alt="" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>LInha Livre</span>
+                            <h3 class="box__title">Smith de Parede</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/livres e articulado/suporte-halter.png" alt="" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>LInha Livre</span>
+                            <h3 class="box__title">Suporte de Haltéres</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                        <div class="box__cards">
+                            <img src="./_assets/livres e articulado/Suporte de Anilhas (1).png" alt="" class="box__cards-img">
+                            <br>
+                            <span class=txt-tags>LInha Livre</span>
+                            <h3 class="box__title">Suporte de Anilhas</h3>
+                            <button type="button" class="box__cards--btn">Selecionar</button>
+                        </div>
+                    </div>      
+                    <button type="button" class="more">ver mais</button>
+                </div>                        
+            </div>                
+        </div>
+    </section>
+    <div id="modal">
+        <i class="fi fi-br-cross dismiss"></i>
+        <div class="bloco">
+            <div class="bloco__imgs">
+                <div class="bloco__imgs-thumbs">
+                    <img src="./_assets/sigma/Cross Angular 2.jpg" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                </div>
+                <div class="bloco__imgs-img">
+                    <i class="fi fi-bs-arrow-small-right"></i>
+                    <i class="fi fi-bs-arrow-small-left"></i>
+                    <img src="./_assets/sigma/Cross Angular.jpg" alt="Cross Angular">
+                </div>
+            </div>
+            <div class="bloco__info">
+                <span class="recomendacao__tag">
+                    revendedores recomendam
+                </span>
+                <br>
+                <p class="recomendacao__line">
+                    Linha Sigma
+                </p>
+                <h3 class="title">
+                    Deltoide Máquina
+                </h3>
+                <p class="txt">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis orci sit amet arcu dapibus sagittis non et ligula. Maecenas placerat in neque a blandit. Pellentesque eu tellus id odio pulvinar viverra. Ut varius metus ac justo ornare, id gravida massa vehicula. Maecenas faucibus justo in dui tristique, vel vehicula mi consectetur. Vestibulum et leo ac metus tristique fringilla at a dolor. Curabitur et.
+                </p>
+                <label for="quantidade">Qntde:</label>
+                <input type="number" name="quantidade" id="quantidade">
+                <div>
+                    <a href="produtos.html" target="_blank" rel="noopener noreferrer">
+                        <button class="recomendacao__btn">
+                            Adicionar ao carrinho
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <hr width="100%">
+        <div class="">
+            <h2 class="title description">Descrição</h2>
+            <ul class="list">
+                <li>Banco Regulável 3 em 1 - Pro</li>
+                <li>Código: Profissional - 3" - 300Kg</li>
+                <li>Categoria: Sigma</li>
+                <li>Descrição</li>
+                <li>Espuma Material: Densidade AG 120</li>
+                <li>Estofado: Courvin padrão "Náutico" Antimofo</li>
+                <li>Pino Mola c/ regulagem e rosca reforçada</li>
+                <li>Pintura eletrostática (alta resistência a corrosão)</li>
+                <li>Solda: MIG, garantindo qualidade e durabilidade</li>
+                <li>Tubulação: 2 a 3 polegadas com 2,25 a 3mm de espessura</li>
+            </ul>
+        </div>
+        <hr width="100%">
+        <h2 class="description">Produtos relacionados</h2>
+        <div class="related">
+            <div class="related__cards">
+                <img src="./_assets/sigma/Supino Multifuncional - (SG-0980) (1).png" alt="" class="related__cards-img">
+                <br>
+                <span>Linha Sigma</span>
+                <h3 class="related__cards-title">Supino Multifuncional</h3>
+            </div>
+            <div class="related__cards">
+                <img src="./_assets/evo/Graviton (1).png" alt="" class="related__cards-img">
+                <br>
+                <span>Linha Sigma</span>
+                <h3 class="related__cards-title">Graviton</h3>
+            </div>
+            <div class="related__cards">
+                <img src="./_assets/evo/Peck Deck - (EV-0950) (1).png" alt="" class="related__cards-img">
+                <br>
+                <span>Linha Sigma</span>
+                <h3 class="related__cards-title">Peck Deck</h3>
+            </div>
+        </div>
+    </div>
     <footer>
         <div class="container">
             <div class="foot">
                 <div class="foot__column">
-                    <a href="mailto:recepcao@omegaacademia.com.br" target="_blank">
-                        <p class="foot__column-email">recepcao@omegaacademia.com.br</p>
-                    </a>
                     <a href="index.html" target="_self">
-                        <img src="./sources/logotipo-white-100x.png" alt="Logotipo Academia Omega">
+                        <img src="./_assets/logotipo-header.png" alt="Logotipo MacSport">
+                    </a>
+                    <a href="mailto:contato@macsport.com.br" class="foot__column-text" target="_blank">
+                        <i class="fi fi-br-envelope"></i><p>contato@macsport.com.br</p>
+                    </a>
+                    <a href="https://wa.me/551155273757?text=Olá%20tudo%20bem?" class="foot__column-text" target="_blank" rel="noopener noreferrer">
+                        <i class="fi fi-brands-whatsapp"></i><p>(11)5527.3757</p>
                     </a>
                 </div>
                 <div class="foot__column">
-                    <a href="horarios.html" target="_self">
-                        <p class="foot__column-title">
-                            Horários de treino
-                        </p>
-                    </a>
-                </div>                
-                <div class="foot__column">
-                    <p class="foot__column-title">Unidades</p>
+                    <p class="foot__column-title">Produtos</p>
                     <ul>
                         <a href="unidades.html">
-                            <li class="foot__column-unidades">São Bernardo</li>
+                            <li class="foot__column-unidades">Musculação</li>
                         </a>
                         <a href="unidades.html">
-                            <li class="foot__column-unidades">Campos Elíseos</li>
+                            <li class="foot__column-unidades">Cardio</li>
                         </a>
                         <a href="unidades.html">
-                            <li class="foot__column-unidades">Campos Sales</li>
-                        </a>
-                        <a href="unidades.html">
-                            <li class="foot__column-unidades">Vinhedo</li>
+                            <li class="foot__column-unidades">Estação</li>
                         </a>
                     </ul>
                 </div>
                 <div class="foot__column">
-                    <a href="vagas.html" target="_self">
+                    <a href="horarios.html" target="_self">
                         <p class="foot__column-title">
-                            Vagas
+                            Quem somos
                         </p>
                     </a>
                 </div>
@@ -259,24 +964,17 @@
                         </p>
                     </a>
                 </div>
-            </div>
-            <div class="foot">
-                <div class="foot__column">
-                    <a href="./fraqueado.html" target="_blank">
-                        <button type="button" class="foot__btn" value="seja um franqueado">Seja um Franqueado</button>
+                <div>
+                    <a href="https://www.linkedin.com/company/macsport-ltd/" target="_blank">
+                        <i class="fi fi-brands-linkedin"></i>
                     </a>
-                    <div class="foot">
-                        <a href="https://www.linkedin.com/company/rede-omega-academia" target="_blank">
-                            <i class="fi fi-brands-linkedin"></i>
-                        </a>
-                        <a href="https://www.instagram.com/redeomegaacademia/" target="_blank">
-                            <i class="fi fi-brands-instagram"></i>
-                        </a>
-                    </div>
+                    <a href="https://www.instagram.com/macsportoficial/" target="_blank">
+                        <i class="fi fi-brands-instagram"></i>
+                    </a>                    
                 </div>
             </div>
-            <hr>
-            <p class="txt__white">Desenvolvido por AGBE Soluções em 2025. Todos os direitos reservados.</p>
+            <hr width="100%" style="border-color:#fff;margin-bottom:0;">
+            <p class="txt">Desenvolvido por AGBE Soluções em 2025. Todos os direitos reservados.</p>
         </div>
     </footer>
     <script src="./js/scripts.js"></script>
