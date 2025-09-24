@@ -172,7 +172,7 @@
     flex-wrap:wrap;
     margin-top:2rem;
     column-gap:2rem;
-    row-gap:3.2rem;
+    row-gap:2rem;
     width:100%;
     @include flex($alg:flex-start);
 
@@ -207,6 +207,54 @@
             box-sizing: border-box;            
             @include btn;
             
+        }
+    }
+    &__cards-lines{
+        flex:1 1 100%;
+        width:100%;
+        max-width:100%;
+        column-gap:1.2rem;
+        border:1px solid c.$formPlaceholder;
+        padding:1rem 2rem;
+        border-radius:.4rem;
+        box-sizing: border-box;
+        @include flex;
+        cursor:pointer;
+        transition:c.$transition-t;
+        &:hover{
+            transform: scale(1.005);
+        }
+        .box__cards-img{
+            flex:1 1 24rem;
+            max-width:16rem;
+            height:12rem;
+            object-fit: cover;
+            border-radius:.4rem;
+            margin:0;
+        }
+        .box__cards-info{
+            flex:1 1 80rem;
+            max-width:80rem;
+            .box__title{
+                font-size:4rem;
+                margin:.4rem 0;
+            }
+        }
+        span{
+            color:c.$terciary;
+            font:300 1.6rem c.$ff;
+            letter-spacing: 1.2px;
+            text-decoration:underline;
+            text-underline-offset:2px;
+            padding:0 2rem;
+            box-sizing: border-box;
+        }
+        .box__cards--btn{
+            display:block;
+            width:30rem;
+            font-size:1.4rem;
+            box-sizing: border-box;            
+            @include btn($mg:1.2rem 2rem);
         }
     }
     &__title{
@@ -400,7 +448,7 @@
     text-transform:uppercase;
     color:c.$principal !important;
 }
-.list{
+#list{
     li{
         margin:.8rem 0;
         font:300 1.4rem c.$ff;
@@ -448,6 +496,50 @@
             flex:0 0 100%;
             max-width:100%;
             margin:2rem 0;
+        }
+    }
+}
+.add--cart{
+    &:hover{
+        transform:scale(1.008);
+        box-shadow:c.$shadow-box;
+    }
+}
+#car-market{
+    display:none;
+}
+.confirm--carrinho{
+    display:none;
+    background-color:c.$bg;
+    position:fixed;
+    width:35vw;
+    padding:4rem 8rem;
+    border-radius:1rem;
+    box-shadow:c.$shadow-box;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    z-index:99;
+    .btns{
+        @include flex;
+        margin:2rem 0;
+        .confirm--accept, .confirm--decline{
+            width:20rem;
+            height:3.6rem;
+            border-radius:.4rem;
+            transition:c.$transition;
+            color:c.$bg;
+            font:c.$ff-dsc;
+            &:hover{
+                transform:scale(1.008);
+                box-shadow:c.$shadow-box;
+            }
+        }
+        .confirm--accept{
+            background-color:c.$btn-positive;
+        }
+        .confirm--decline{
+            background-color:c.$terciary;
         }
     }
 }

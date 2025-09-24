@@ -212,7 +212,7 @@ button {
   flex-wrap: wrap;
   margin-top: 2rem;
   column-gap: 2rem;
-  row-gap: 3.2rem;
+  row-gap: 2rem;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -258,6 +258,67 @@ button {
   transition: all 0.25s ease-in;
 }
 .box__cards--btn:hover {
+  background-color: #FFE06D;
+  color: #838382;
+}
+.box__cards-lines {
+  flex: 1 1 100%;
+  width: 100%;
+  max-width: 100%;
+  column-gap: 1.2rem;
+  border: 1px solid #d9d9d9;
+  padding: 1rem 2rem;
+  border-radius: 0.4rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  cursor: pointer;
+  transition: transform 0.25 ease-in;
+}
+.box__cards-lines:hover {
+  transform: scale(1.005);
+}
+.box__cards-lines .box__cards-img {
+  flex: 1 1 24rem;
+  max-width: 16rem;
+  height: 12rem;
+  object-fit: cover;
+  border-radius: 0.4rem;
+  margin: 0;
+}
+.box__cards-lines .box__cards-info {
+  flex: 1 1 80rem;
+  max-width: 80rem;
+}
+.box__cards-lines .box__cards-info .box__title {
+  font-size: 4rem;
+  margin: 0.4rem 0;
+}
+.box__cards-lines span {
+  color: #C5203C;
+  font: 300 1.6rem "Gabarito", sans-serif;
+  letter-spacing: 1.2px;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+.box__cards-lines .box__cards--btn {
+  display: block;
+  width: 30rem;
+  font-size: 1.4rem;
+  box-sizing: border-box;
+  border: none;
+  background-color: #FFCB0B;
+  padding: 0.8rem 2rem;
+  border-radius: 2rem;
+  color: #31302E;
+  margin: 1.2rem 2rem;
+  transition: all 0.25s ease-in;
+}
+.box__cards-lines .box__cards--btn:hover {
   background-color: #FFE06D;
   color: #838382;
 }
@@ -466,7 +527,7 @@ button {
   color: #31302E !important;
 }
 
-.list li, .produtos__cards-filters .filter li {
+#list li {
   margin: 0.8rem 0;
   font: 300 1.4rem "Gabarito", sans-serif;
   color: #838382;
@@ -520,6 +581,54 @@ button {
     max-width: 100%;
     margin: 2rem 0;
   }
+}
+
+.add--cart:hover {
+  transform: scale(1.008);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+#car-market {
+  display: none;
+}
+
+.confirm--carrinho {
+  display: none;
+  background-color: #FEFEFD;
+  position: fixed;
+  width: 35vw;
+  padding: 4rem 8rem;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+}
+.confirm--carrinho .btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin: 2rem 0;
+}
+.confirm--carrinho .btns .confirm--accept, .confirm--carrinho .btns .confirm--decline {
+  width: 20rem;
+  height: 3.6rem;
+  border-radius: 0.4rem;
+  transition: all 0.25s ease-in;
+  color: #FEFEFD;
+  font: 200 1.6rem/2.4rem "Gabarito", sans-serif;
+}
+.confirm--carrinho .btns .confirm--accept:hover, .confirm--carrinho .btns .confirm--decline:hover {
+  transform: scale(1.008);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
+}
+.confirm--carrinho .btns .confirm--accept {
+  background-color: #009951;
+}
+.confirm--carrinho .btns .confirm--decline {
+  background-color: #C5203C;
 }
 
 html {
@@ -1485,12 +1594,12 @@ a:visited {
   padding: 2rem;
   box-sizing: border-box;
   border: 1px solid #838382;
-  width: 80%;
+  width: 60vw;
   border-radius: 0.8rem;
   cursor: pointer;
   transition: all 0.25s ease-in;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: row;
   display: flex;
 }
@@ -1499,8 +1608,8 @@ a:visited {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
 }
 .carrinho__cards-img {
-  width: 16rem;
-  height: 16rem;
+  width: 12rem;
+  height: 12rem;
   object-fit: cover;
   border-radius: 0.4rem;
 }
@@ -1509,7 +1618,7 @@ a:visited {
   color: #31302E;
 }
 .carrinho__buttons {
-  width: 80%;
+  width: 60vw;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;

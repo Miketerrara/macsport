@@ -830,18 +830,18 @@ a{
         padding:2rem;
         box-sizing:border-box;
         border:1px solid c.$principal-h;
-        width:80%;
+        width:60vw;
         border-radius:.8rem;
         cursor:pointer;
         transition:c.$transition;
-        @include flex($alg:flex-start,$jtf:flex-start);
+        @include flex($jtf:flex-start);
         &:hover{
             transform:scale(1.005);
             box-shadow:c.$shadow-box;
         }
         &-img{
-            width:16rem;
-            height:16rem;
+            width:12rem;
+            height:12rem;
             object-fit: cover;
             border-radius:.4rem;
         }
@@ -851,7 +851,7 @@ a{
         color:c.$principal;
     }
     &__buttons{
-        width:80%;
+        width:60vw;
         @include flex;
         &--back{
             @include buttons($m:2rem 0, $bg:c.$principal-h,$c:c.$bg, $bg-h:c.$formPlaceholder);
