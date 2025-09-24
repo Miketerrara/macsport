@@ -370,6 +370,7 @@ function filtrar(elemento){
         }
     }
 }
+
 elements.assist.addEventListener("click", screenAss)
 
 elements.toggle.addEventListener("click", ()=>{
@@ -544,4 +545,7 @@ if(window.location.pathname == "/macsport/index.html"){
             }
         })
     })
+}
+if(window.location.pathname != "/macsport/produtos.html"){
+    single.produtos.style.display = "none";
 }
