@@ -259,6 +259,7 @@ function column() {
     for(let i=0; i< modal.box.length; i++){
         modal.box[i].classList.value = "";
         modal.box[i].classList.value = "box__cards";
+        modal.box[i].style.display = "block";
     }
 }
 function list() {
@@ -266,6 +267,7 @@ function list() {
         modal.box[i].classList.value = "";
         document.querySelector(".box").style.gap = "8px";
         modal.box[i].classList.value = "box__cards-lines";
+        modal.box[i].style.display = "flex";
     }
 
 }
@@ -386,8 +388,8 @@ for (let i=0; i< elements.headerItens.length; i++){
         item.addEventListener("click", ()=>{
             console.log(item.innerHTML.toLowerCase())
             let elemento = item.innerHTML.toLowerCase();
-            caught(elemento)
             filtrar(elemento)
+            caught(elemento)
         })
     })
 }
@@ -465,7 +467,6 @@ if(window.location.pathname == "/macsport/index.html"){
     
 
     single.produtos.style.display = "none";
-    //Enviar para equipamentos Strong.
     
     single.catStrong.addEventListener("click", ()=>{
         let elemento = Array.from(dataId).find(title=> title.dataset.line === "strong").innerHTML.toLowerCase();
@@ -477,7 +478,6 @@ if(window.location.pathname == "/macsport/index.html"){
         quantify()
     })
     
-    //Enviar para equipamentos livres.
     single.catLivre.addEventListener("click", ()=>{
         let elemento = Array.from(dataId).find(title=> title.dataset.line === "livre").innerHTML.toLowerCase();
         caught(elemento);
@@ -487,7 +487,7 @@ if(window.location.pathname == "/macsport/index.html"){
         filtrar(elemento)
         quantify();
     })
-    let date = new Date("2025-09-22T00:00:00");
+    let date = new Date("2025-09-25T00:00:00");
     let duration = new Date(date);
     duration.setDate(date.getDate() + 3);
     
@@ -497,7 +497,7 @@ if(window.location.pathname == "/macsport/index.html"){
         if (tempoRestante <= 0) {
             single.promoteHour.innerHTML = "Esgotado!"
             clearInterval(intervalo);
-            return;
+            return console.log("acabouuu");
         }
         let dias = Math.floor(tempoRestante / (1000 *60*60*24));
         let horas = Math.floor((tempoRestante / (1000 * 60 * 60)));
@@ -510,6 +510,7 @@ if(window.location.pathname == "/macsport/index.html"){
     let intervalo = setInterval(atualizarContador, 1000);
     
     single.catRecommended.addEventListener("click", ()=>{
+        console.log("clicou")
         let elemento = document.querySelector(".recomendacao__line").innerHTML.toLocaleLowerCase().split(" ")[1];
         caught(elemento)
 
