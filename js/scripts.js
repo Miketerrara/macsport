@@ -16,8 +16,11 @@ const single = {
     main: document.getElementsByTagName("main"),
     promoteHour: document.querySelector(".section__title-timer"),
     catRecommended: document.querySelector(".recomendacao__btn"),
-    betters: document.querySelectorAll(".boxes__item")
+    betters: document.querySelectorAll(".boxes__item"),
+    lineStrong: document.getElementsByName("strong-line"),
+    lineLivre: document.getElementsByName("livre-line")
 }
+console.log(single.catStrong)
 const filters = {
     checkbox: document.querySelectorAll(".check"),
     seletores: document.querySelectorAll(".produtos__sidebar-btn"),
@@ -190,7 +193,6 @@ function close(modalElement) {
         modalElement.style.display = "none";
     })
 }
-console.log(_gallery[0])
 let tags = document.querySelectorAll(".txt-tags");
 function descLines() {
     modal.dsc.innerHTML = "";
@@ -393,10 +395,10 @@ for (let i=0; i< elements.headerItens.length; i++){
         })
     })
 }
+
 let cacheTitle = [];
 let cacheImg = [];
 let cacheLine = [];
-
 
 modal.addCart.addEventListener("click",()=>{
     console.log(modal.line.innerHTML)
@@ -448,11 +450,13 @@ modal.addCart.addEventListener("click",()=>{
     })
 
 })
+
 function voltarProduto() {
     console.log("voltarProduto")
     modal.openCarMarket.style.display = "none";
     single.produtos.style.display = "block";
 }
+
 function enviarProdutos(){
     let quanti = `Olá, tudo bem? Eu gostaria de fazer orçamento destes itens:`;
     for(let i=0; i<cacheTitle.length; i++){
@@ -462,23 +466,22 @@ function enviarProdutos(){
     window.open(`https://wa.me/5519990181064?text=${quanti}`, '_blank');
     
 }
-if(window.location.pathname == "/macsport/index.html"){
+
+if(window.location.pathname == "/" || "/index.html"){
     let dataId = document.getElementsByTagName("h3");
     
-
     single.produtos.style.display = "none";
     
-    single.catStrong.addEventListener("click", ()=>{
+    function strongPage() {
         let elemento = Array.from(dataId).find(title=> title.dataset.line === "strong").innerHTML.toLowerCase();
         caught(elemento)
 
         filters.seletores[0].dispatchEvent(new Event("click"));
         filters.checkbox[1].checked = true;
-        filtrar(elemento)
-        quantify()
-    })
-    
-    single.catLivre.addEventListener("click", ()=>{
+        filtrar(elemento);
+        quantify();
+    }
+    function livrePage() {
         let elemento = Array.from(dataId).find(title=> title.dataset.line === "livre").innerHTML.toLowerCase();
         caught(elemento);
 
@@ -486,29 +489,15 @@ if(window.location.pathname == "/macsport/index.html"){
         filters.checkbox[0].checked = true;
         filtrar(elemento)
         quantify();
-    })
-    let date = new Date("2025-09-25T00:00:00");
-    let duration = new Date(date);
-    duration.setDate(date.getDate() + 3);
-    
-    function atualizarContador() {
-        let agora = new Date();
-        let tempoRestante = duration - agora;
-        if (tempoRestante <= 0) {
-            single.promoteHour.innerHTML = "Esgotado!"
-            clearInterval(intervalo);
-            return console.log("acabouuu");
-        }
-        let dias = Math.floor(tempoRestante / (1000 *60*60*24));
-        let horas = Math.floor((tempoRestante / (1000 * 60 * 60)));
-        let minutos = Math.floor((tempoRestante / (1000 * 60)) % 60);
-        let segundos = Math.floor((tempoRestante / 1000) % 60)
-
-        single.promoteHour.innerHTML = `${horas}:${minutos}:${segundos}`
     }
-    atualizarContador();
-    let intervalo = setInterval(atualizarContador, 1000);
-    
+
+    single.catStrong.addEventListener("click", ()=>{
+        strongPage();
+    })
+    single.catLivre.addEventListener("click", ()=>{
+        livrePage();
+    })
+
     single.catRecommended.addEventListener("click", ()=>{
         console.log("clicou")
         let elemento = document.querySelector(".recomendacao__line").innerHTML.toLocaleLowerCase().split(" ")[1];
@@ -547,6 +536,30 @@ if(window.location.pathname == "/macsport/index.html"){
         })
     })
 }
-if(window.location.pathname != "/macsport/produtos.html"){
-    single.produtos.style.display = "none";
+
+let date = new Date("2025-09-25T00:00:00");
+let duration = new Date(date);
+duration.setDate(date.getDate() + 3);
+
+function atualizarContador() {
+    let agora = new Date();
+    let tempoRestante = duration - agora;
+    if (tempoRestante <= 0) {
+        single.promoteHour.innerHTML = "Esgotado!"
+        clearInterval(intervalo);
+        return console.log("acabouuu");
+    }
+    let dias = Math.floor(tempoRestante / (1000 *60*60*24));
+    let horas = Math.floor((tempoRestante / (1000 * 60 * 60)));
+    let minutos = Math.floor((tempoRestante / (1000 * 60)) % 60);
+    let segundos = Math.floor((tempoRestante / 1000) % 60)
+    
+    single.promoteHour.innerHTML = `${horas}:${minutos}:${segundos}`
 }
+atualizarContador();
+let intervalo = setInterval(atualizarContador, 1000);
+ 
+if(window.location.pathname != "/produtos.html"){
+   single.produtos.style.display = "none";
+}
+

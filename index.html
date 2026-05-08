@@ -62,10 +62,10 @@
                             </div>                            
                         </li>
                         <li>
-                            <a href="about.html" class="nav-itens">quem somos</a>
+                            <a href="about.html" target="_self" class="nav-itens">quem somos</a>
                         </li>
                         <li>
-                            <a href="contato.html" class="nav-itens">contato</a>
+                            <a href="contato.html" target="_self" class="nav-itens">contato</a>
                         </li>
                         <hr width="40px" style="rotate:90deg;">
                         <li>
@@ -94,16 +94,21 @@
                 <i class="fi fi-bs-exit"></i>
             </button>
             <h4 class="assistencia__title">Preencha o formulário para enviar a solicitação</h4>
-            <form action="" class="assistencia__form">
+            <form action="https://formsubmit.co/michaeldrums19@gmail.com" method="POST" class="assistencia__form">
                 <label for="fullname">Nome Completo</label>
-                <input type="text" id="fullname" placeholder="Digite seu nome completo">
+                <input type="text" id="fullname" name="Nome Completo" placeholder="Digite seu nome completo" required>
                 <label for="tel">Telefone</label>
-                <input type="text" id="tel" placeholder="(xx) xxxxx.xxxx">
+                <input type="tel" id="tel" name="tel" placeholder="(xx) xxxxx.xxxx" required> 
                 <label for="email">E-mail</label>
-                <input type="text" id="email" placeholder="contato@seuemail.com.br">
+                <input type="email" id="email" name="e-mail" placeholder="contato@seuemail.com.br" required>
                 <label for="mensagem">Descreva seu problema</label>
                 <textarea name="mensagem" id="mensagem" placeholder="Descreva o seu problem..."></textarea>
-                <input type="submit" value="Solicitar Assistência" class="submit">
+                <input type="hidden" name="_next" value="https://macsport.com.br/thanks-support-page.html">
+                <input type="hidden" name="_subject" value="MACSPORT | Assistência solicitada">
+                <input type="hidden" name="_cc" value="assistencia@macsport.com.br">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <button type="submit" class="submit">Solicitar Assistência</button>
             </form>
         </div>
     </header>
@@ -143,7 +148,7 @@
                             <span>Linha de equipamentos</span>
                             <h3 class="title" data-line="strong">Strong</h3>
                             <p class="desc">Equipamentos para te trazer<span></span>o melhor resultado</p>
-                            <button type="button" class="descubra__bloco-btn" id="strong">Descubra</button>
+                            <button type="button" class="descubra__bloco-btn" name="strong-line" id="strong">Descubra</button>
                         </div>
                         <img class="descubra__bloco-img" src="./_assets/descubra--strong.jpg" alt="Linha de equipamentos Strong">
                     </div>
@@ -152,7 +157,7 @@
                             <span>Linha de equipamentos</span>
                             <h3 class="title" data-line="livre">Livre</h3>
                             <p class="desc">Equipamentos para te levar<span></span>a um passo adiante</p>
-                            <button type="button" class="descubra__bloco-btn" id="livre">Descubra</button>
+                            <button type="button" class="descubra__bloco-btn" name="livre-line" id="livre">Descubra</button>
                         </div>
                         <img class="descubra__bloco-img" src="./_assets/descubra--livre.jpg" alt="Linha de equipamentos Livres">
                     </div>
@@ -1101,7 +1106,7 @@
             <button type="button" class="confirm--decline">Continuar comprando</button>
         </div>
     </div>
-    <a href="https://wa.me/5519988773344?text=Olá%20tudo%20bem?%20Gostaria%20de%20saber%20quais%20são%20os%20seus%20planos%20disponíveis?" target="_blank">
+    <a href="https://wa.me/551155273757?text=Olá%20tudo%20bem?%20Gostaria%20de%20saber%20quais%20são%20os%20seus%20planos%20disponíveis?" target="_blank">
         <div class="whatsapp-fixed">
             <i class="fi fi-brands-whatsapp"></i>
         </div>

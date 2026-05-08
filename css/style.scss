@@ -391,7 +391,12 @@ header{
         font:c.$ff-h1-mm;
         color:c.$principal;
     }
-    
+    &__thanks{
+        width:100%;
+        text-align:center;
+        font:c.$ff-h1-mm;
+        color:c.$principal;
+    }
 }
 .container{
     width:100%;
@@ -628,6 +633,12 @@ header{
     color:c.$principal-h;
     margin: 1rem 0;
     text-align:left;
+    &__thanks{
+        font: c.$ff-dsc;
+        color:c.$principal;
+        text-align:center;
+        margin:2rem auto;
+    }
 }
 .recomendacao{
     gap:2rem;
@@ -1007,6 +1018,35 @@ footer{
         .txt{
             text-align:center;
             padding:0 2rem;
+            box-sizing: border-box;
+        }
+    }
+}
+.thanks{
+    background-color:c.$secondary;
+    width:100vw;
+    height:100vh;
+    &__container{
+        position:absolute;
+        margin: 0 auto;
+        left:50%;
+        top:50%;
+        transform:translate(-50%, -50%);
+        border:1px solid c.$principal-h;
+        border-radius:1rem;
+        padding:24vh 12vw;
+        box-sizing:border-box;
+        &-logo{
+            width:12rem;
+            margin:0 auto 8rem;
+            display:block;
+        }
+        &-btn{
+            display:block;
+            margin:0 auto;
+            border:1px solid c.$principal-h;
+            border-radius:12rem;
+            padding:1.6rem 3.2rem;
             box-sizing: border-box;
         }
     }
